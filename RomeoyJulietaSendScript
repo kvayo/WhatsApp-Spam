@@ -1,0 +1,809 @@
+async function enviarScript(scriptText){
+const lines = scriptText.split(/[\n\t]+/).map(line =>
+line.trim()).filter(line => line);
+main = document.querySelector("#main"),
+textarea = main.querySelector(`div[contenteditable="true"]`)
+if(!textarea) throw new Error("Não há uma conversa aberta")
+for(const line of lines){
+console.log(line)
+textarea.focus();
+document.execCommand('insertText', false, line);
+textarea.dispatchEvent(new Event('change', {bubbles: true}));
+setTimeout(() => {
+(main.querySelector(`[data-testid="send"]`) ||
+main.querySelector(`[data-icon="send"]`)).click();
+}, 100);
+if(lines.indexOf(line) !== lines.length - 1) await new
+Promise(resolve => setTimeout(resolve, 250));
+}
+return lines.length;
+}
+enviarScript(`
+
+             
+ACTO I
+             
+ESCENA PRIMERA
+             
+Cuando se abre el telón, hay una niña con un libro en la mano, está leyendo, está
+sentada en
+el suelo, en proscenio. Por la derecha entra otra niña y se le acerca con
+curiosidad.
+Amigas (todas)
+¿Qué haces?
+Lectora
+Estoy leyendo un libro de Shakespeare.
+Amiga1
+¿De quién?
+Lectora
+De Shakespeare, William Shakespeare, ¡no me digas que no conoces a Shakespeare!
+Amiga 2
+Pues no, pero me suena a algún cantante famoso...
+Amiga William Shakespeare fue un gran dramaturgo inglés que escribió muchas obras
+de teatro.
+Amiga 2 (Transición). Bueno es igual, dime... ¿Cómo se titula el libro?
+Lectora
+Romeo y Julieta, es una obra que ha traspasado generaciones, es una de las más
+bellas, de las más
+selectas que encierra el teatro de Shakespeare. Es la representación de la tragedia
+del amor...
+Amiga 3
+Una tragedia... vaya, vaya... Y ¿de qué trata?
+Lectora
+Pues es la historia de una pareja de enamorados, condenados a no poder disfrutar de
+su amor.
+Amiga 2 ¿Por qué?
+Lectora Porque sus familias se odiaban.
+Amiga 1 Ah ya, he escuchado que es una de las obras más conocidas del teatro de
+Shakespeare.
+Amiga 2 sí, yo también había escuchado algo así. Pero,
+lgr Página 3
+(dirigiéndose a la lectora) ¿por qué se odiaban las familias? ¡Qué feo! cuéntame
+más por favor...
+Lectora Verás, todo se desarrolla en la bella ciudad de Verona (Italia), dos
+familias arrastradas por
+antiguas discordias, inician una nueva disputa. De las sombrias entrañas de estas
+dos familias nacen dos
+desdichados amantes. El terrible episodio de este amor y las persistencia del
+encono de sus allegados se
+entregan a nuevas turbulencias.
+Todo comienza en una plaza donde se encuentran …
+ESCENA SEGUNDA
+(Entran SANSÓN y GREGORIO (sirvientres Capuleto, armadas con espadas )
+Por otro lado sale Abraham sirviente Montesco.
+SANSÓN La riña es entre nuestros amos y nosotros , Gregorio, aquí está la casa de
+los
+Montesco. (se detienen y observan Abraham)
+SANSON Yo soy ligero de manos cuando se me provoca.
+GREGORIO Pero no se te provoca fácilmente a sentar la mano.
+SANSÓN La vista de uno de esos perros de la casa de Montesco me transporta.
+GREGORIO Trasportarse es huir, ser valiente es aguardar a pie firme: por eso es que
+el
+trasportarte tú, es ponerte en salvo.
+SANSÓN Un perro de la casa ésa me provocará a mantenerme en el puesto. Yo siempre
+tomaré la acera a todo individuo de ella, sea hombre o mujer.
+GREGORIO Eso prueba que eres un débil, pues a la acera se arriman los débiles.
+SANSÓN Verdad; y por eso, siendo las mujeres las más débiles, se las pega siempre a
+la
+acera. Así, pues, cuando en la acera me tropiece con algún Montesco, le echo fuera.
+GREGORIO La contienda es entre nuestros amos, entre nosotros sus servidores.
+SANSÓN Es igual, quiero mostrarme tirano. Cuando me haya batido con los criados.
+GREGORIO Fortuna es que no seas pez; si lo fueras, serías un pobre arenque. Echa
+fuera el
+estoque; allí vienen dos de los Montesco.
+(Entran ABRAHAM y BALTASAR.)
+ABRAHAM Buenos días (escogiendo unas frutas)
+VENDEDORA: Buenos días Señor
+lgr Página 4
+(Abraham continúa caminando hasta encontrarse con Sansón y Gregorio).
+GREGORIO Pelea y yo te apoyaré.
+SANSÓN Sí, no tengas miedo por mí.
+SANSÓN Desnuda tengo la espada. Busca querella, detrás de ti iré yo.
+GREGORIO ¡Cómo! ¿irte detrás y huir?
+SANSÓN No temas nada de mí.
+GREGORIO ¡Temerte yo! No, por cierto.
+SANSÓN Pongamos la razón de nuestro lado; dejémosles comenzar.
+GREGORIO Al pasar por su lado frunciré el ceño y que lo tomen como quieran.
+SANSÓN Di más bien como se atrevan. Voy a morderme el dedo pulgar al enfrentarme
+con
+ellos y una ofensa les será si lo soportan. (SE MUERDE EL PULGAR Y ESCUPE FRENTE
+A ABRAHAM)
+ABRAHAM ¡Eh! ¿te muerdes el pulgar para afrentarnos?
+SANSÓN Me muerdo el pulgar, señor.
+ABRAHAM ¿te muerdes el pulgar, señor, para causarnos afrenta?
+SANSÓN (aparte a GREGORIO.) ¿Estará la justicia de nuestra parte si respondo sí?
+GREGORIO No.
+SANSÓN No, señor, no me muerdo el pulgar para afrentarte; me lo muerdo, sí.
+GREGORIO ¿Buscas pleito, señor?
+ABRAHAM ¿pleito dices? No, señor.
+SANSÓN Pues si la buscas, aquí estoy: Sirvo a tan buen amo como tú.
+ABRAHAM ¿No es major?
+SANSÓN Sí, es mejor, señor.
+ABRAHAM Tú mientes. (SIGUE CAMINANDO)
+(GREGORIO LE PONE EL PIE A BALTASAR Y RÍE, )
+lgr Página 5
+GREGORIO (aparte a SANSÓN.) Di mejor. Ahí viene uno de los parientes de mi amo.
+ABRAHAM: ¡Desenvaninen, desenvainen si son hombres1
+(Aparece a lo lejos BENVOLIO.)
+SANSÓN
+Sí, mejor. ¡Desenvainen, si son hombres!. -Gregorio, no olvides tu estocada
+maestra .
+(Pelean.)
+BENVOLIO (intent separlos.) ¡tengan insensatos! Envainen las espadas. El principe
+ha
+prohibido estas trifulcas!!
+(Entra TEOBALDO con acompañantes )
+TEOBALDO ¿Cómo? Peleas contra es pobres siervos? Vuélvete, Benvolio, afronta tu
+muerte.
+BENVOLIO
+Solo pongo paz; torna tu espada a la vaina, o sírvete de ella para ayudarme a
+separar
+a esta gente.
+TEOBALDO
+¡Qué! ¿¡Desnudo el acero y hablas de paz!? Odio esa palabra como odio al
+infierno, a todos los Montesco y a ti? Defiéndete, cobarde!
+(Se baten.)
+(Entran partidarios de las dos casas, que toman parte en la contienda; enseguida
+algunos ciudadanos armados de garrotes.)
+PRIMER CIUDADANO
+¡Garrotes, picas, partesanas! ¡Arrimad, derribadlos! ¡A tierra con los Capuletos!
+¡A tierra con los Montesco!
+(Entran, CAPULETO en traje de casa, y su esposa.)
+CAPULETO (papás de Julieta) ¡Qué ruido es éste! ¡Hola! Dadme mi espada de combate.
+lgr Página 6
+LADY CAPULETO ¡Un palo, un palo! ¿Por qué pides una espada?
+CAPULETO ¡Mi espada digo! Ahí llega el viejo Montesco que esgrime la suya
+desafiándome.
+(Entran MONTESCO y LADY MONTESCO.)
+MONTESCO ¡Tú, miserable Capuleto! -No me detengas, déjame en libertad.
+LADY MONTESCO No darás un Solo paso para buscar un contrario.]
+(Entran el PRÍNCIPE y sus acompañantes (SE OYEN TROMPETAS.)
+(SE OYE QUE GRITAN
+:Viene el príncipe! ¡Suelten las armas!
+PRÍNCIPE
+¡ rebeldes súbditos!,¡ enemigos de la paz!, profanadores de ese acero que manchas
+de sangre -
+¿No quieren oír? ¡Eh, basta! hombres, ¡tiren sus furiosas armas al suelo! y
+escuchen la
+sentencia de su indignado Príncipe.
+¡tres reyertas civiles! Generadas por tu palabra inoportuna, Viejo Capuleto…
+Y los montesco, han perturbado tres veces la quietud de nuestras calles.
+Si vuelven en lo sucesivo a perturbar el reposo de la población, con sus cabezas
+pagarán el precio de la paz. Por esta vez, que los demás se marchen. Usted,
+Capuleto,
+venga conmigo; Usted, Montesco, venga es tarde.
+Lo digo de nuevo, bajo pena de muerte, ¡que todos se retiren!.
+(Se van todos menos MONTESCO, LADY MONTESCO y BENVOLIO)
+lgr Página 7
+(Se van todos menos MONTESCO, LADY MONTESCO y BENVOLIO)
+LADY MONTESCO
+¡Oh! ¿dónde está Romeo? -¿Le has visto hoy? Muy satisfecha estoy de que no se haya
+encontrado en esta refriega
+MONTESCO
+¿Quién ha vuelto a despertar esta antigua querella? Habla, sobrino, ¿estabas
+presente cuando comenzó?
+BENVOLIO
+Los satélites de Capuleto y los suyos estaban aquí batiéndose encarnizadamente
+antes
+de mi llegada: yo desenvainé para apartarlos: en tal momento se presenta el
+violento
+Teobaldo, espada en mano, lanzando a mi oído provocaciones, Mientras nos
+devolvíamos
+golpes y estocadas, iban llegando y entraban en contienda partidarios de uno y otro
+bando,
+hasta que vino el Príncipe y los separó.
+(Aparece ROMEO, a cierta distancia.)
+BENVOLIO Mirad, allí viene: tener a bien alejarse.
+(MONTESCO y su esposa se retiran.)
+BENVOLIO Buenos días, primo.
+ROMEO ¿Tan joven está el día?
+BENVOLIO Acaban de dar las nueve.
+ROMEO ¡ay de mí! Las horas tristes parecen largas! (triste y pensativo) ¿ Era mi
+padre el
+que se fue tan deprisa?
+BENVOLIO Sí. -¿Qué pesar es el que alarga las horas de Romeo? ¿Carencia de amor?
+ROMEO No tener lo que, teniéndolo, las acorta.
+BENVOLIO Pero, Romeo
+ROMEO Adios, primo (camina) ¿Qué pelea ha habido aquí? No me lo digas. Pues lo he
+lgr Página 8
+oído todo. Mucho que ver con el odio y más con el amor.
+BENVOLIO¡Ay! ¡Que el amor, al parecer tan dulce, sea en la prueba tan tirano y tan
+cruel!
+ROMEO ¡Ay! ¡que el amor, cuyos ojos están siempre vendados, halle sin ver la
+dirección de su
+blanco! ¿Dónde comeremos? ¡Oh, Dios! ¿qué refriega era ésta? Mas no me lo digas,
+pues todo lo
+he oído. Mucho hay que luchar aquí con el odio, pero más con el amor. ¿No te ríes?
+BENVOLIO
+No, primo, lloro mas bien.
+ROMEO
+¿Por qué, buen corazón?
+BENVOLIO
+De ver la pena que oprime tu alma.
+ROMEO
+Mis propios dolores ya eran carga excesiva en mi pecho; para oprimirlo más, quieres
+aumentar mis pesares con los tuyos . El amor es un humo formado por el vapor de los
+suspiros; alentado, un fuego que brilla en los ojos de los amantes; comprimido, un
+mar que
+alimentan sus lágrimas. ¿Qué más es? Una locura razonable al extremo,, una dulzura
+que
+conserva. Adiós, primo.
+BENVOLIO Aguarda, quiero acompañarte; me ofende si me dejas así. Dime ¿quién es la
+persona a quien amas?
+ROMEO
+Ella está fuera del alcance de las flechas de Cupido, La que adoro no se deja
+importunar
+con amorosas propuestas, ¡Oh! Ella es rica en belleza.
+BENVOLIO Sigue mi consejo, deséchala de tu pensamiento.
+ROMEO ¡Oh! Dime de qué modo puedo cesar de pensar.
+BENVOLIO Devolviendo la libertad a tus ojos, deteniéndolos en otras beldades.
+ROMEO
+Pon ante mí una mujer encantadora al extremo, ¿qué será su belleza sino una página
+en
+que podré leer el nombre de otra beldad más encantadora aún? Adiós, tú no puedes
+lgr Página 9
+enseñarme a olvidar.
+BENVOLIO
+Te demostraré la eficacia de mi consejo o quedaré en deuda contigo. (SALEN)
+CASA DE LOS CAPULETO
+(Entran LADY CAPULETO y la NODRIZA.)
+LADY CAPULETO (areglándose ) Nodriza, ¿dónde está mi hija? Dile que venga aquí.
+NODRIZA Sí, a fe de doncella -a los doce años. -Le he dicho que venga. -¡Eh!
+¡Cordero
+mío! ¡Eh! ¡Tierna palomilla! -¡Dios me ampare! -¿Por dónde anda esta muchacha? ¡Eh,
+Julieta!
+(Entra JULIETA.)
+JULIETA ¿Qué hay, quién me llama?
+NODRIZA tu madre.
+JULIETA Aquí me tienes, señora. ¿Qué mandas?
+LADY CAPULETO Se trata de lo siguiente: -Nodriza, déjanos un momento, tenemos que
+hablar en privado - Vuelve acá, nodriza, he cambiado de opinión; presenciarás
+nuestro
+coloquio. Ves que mi hija es de una bonita edad.
+NODRIZA Ciertamente; puedo decirle su edad con diferencia de una hora.
+LADY CAPULETO No ha cumplido catorce.
+NODRIZA Apostaría catorce de mis dientes (y, dicho sea con dolor, cuento sólo
+cuatro) a
+que no tiene catorce. ¿Cuánto va de hoy al primero de agosto?
+LADY CAPULETO Una quincena larga.
+NODRIZA Larga o corta, el día primero de agosto, al caer la tarde, cumplirá catorce
+años.; los
+cumplirá, no hay duda, la tarde del primero de agosto, hacia el oscurecer, cumplirá
+Julieta catorce
+años; los cumplirá, no hay duda lo recuerdo perfectamente.
+[LADY CAPULETO Basta de esto, por favor; cállate.
+NODRIZA Sí, señora
+JULIETA Concluye, concluye tú también, nodriza, te lo suplico.
+lgr Página 10
+NODRIZA Callo, he acabado. ¡La gracia de Dios te proteja! Eras la criatura más
+linda de
+cuantas crié: Si vivo lo bastante para verte un día casada, quedaré satisfecha.
+LADY CAPULETO A punto; el matrimonio es precisamente lo particular de que quería
+tratar. Dime, Julieta, hija mía, ¿en qué disposición te sientes para el matrimonio?
+JULIETA Es un honor en el que no he pensado.
+LADY CAPULETO Bien, piensa de presente en el matrimonio: muchas más jóvenes que tú,
+personas de gran estima en Verona, son madres ya: yo por mi cuenta lo era tuya
+antes de la
+edad que, aun soltera, tienes hoy. En dos palabras, por último], el valiente Paris
+te pretende.
+NODRIZA ¡Es un hombre, señorita! Un hombre como en el mundo entero. -¡Oh! es un
+hombre hecho a molde.
+LADY CAPULETO La primavera de Verona no presenta una flor parecida.
+NODRIZA Sí, por mi vida, es una flor, una verdadera flor.
+LADY CAPULETO ¿Qué dices? ¿Podrás amar a ese hidalgo? Esta noche le verás en
+nuestra
+fiesta. Lee en la fisonomía del joven Paris, lee en ese libro y en él hallarás
+retratado el placer
+con la pluma de la belleza, verás cómo se prestan mutuo encanto;. Este precioso
+libro de amor,
+este amante sin sujeciones, para realzarse, sólo necesita una cubierta. El pez vive
+en el mar y
+es un grande orgullo para la belleza el dar asilo a la belleza. El libro que con
+broches de oro
+encierra la dorada Leyenda, gana esplendor a los ojos de muchos: poseyéndole, pues,
+participaréis de todo lo que es suyo, sin disminuir nada de lo que tuyo es.
+NODRIZA ¡Disminuir! No, engrandecerá; de los hombres reciben incremento las mujeres
+.]
+LADY CAPULETO Se breve, ¿aceptarás el amor de Paris?
+JULIETA Veré de amarle si para amar vale el ver; pero no dejaré tomar más vuelo a
+mi
+inclinación que el que deje tu voluntad.
+(Entra un CRIADO.)
+CRIADO Señora, los invitados están ya ahí, la cena se haya servida, se les espera,
+preguntan
+por la señorita, Tengo que irme a servir; les suplico que vengan sin demora.
+LADY CAPULETO Te seguimos. Julieta, el conde nos aguarda.
+NODRIZA Ve, niña; añade dichosas noches a dichosos días.
+lgr Página 11
+TERCERA ESCENA
+AMIGAS
+AMIGA : pues se ve que Romeo está muy enamorado.
+LECTORA: Pues sí. Por lo que su amigo Benvolio decide presentarle otras jóvenes
+para
+poder olvidar a su amada Rosalía.
+AMIGA ¿Rosalía? ¿No es Julieta?
+LECTORA Calma, espera. Verás que sucederá.
+AMIGA ¡Miren! Aquí dice que Romeo se enteró que habría una fiesta en la casa de los
+Capuleto .
+Amiga Sí, familia de nuestra protagonista para que conociera a un pretendiente que
+deseaba casarse con ella.
+AMIGA: ¿En casa de los Capuleto? ¿Pero no se supone que son enemigos?
+LECTORA 1 claro pero lo que no sabes es que no lo reconocerán.
+AMIGA: ¿Pero cómo?
+AMIGA: Pues es que esta fiesta será de mascaras y Benvolio lo anima a asistir.
+LECTORA 2: Se encienden las antorchas en los salones y la luz auyenta la noche.
+Entran
+las mascaras y la casa pronto se llena de ruido, risas y colores estridentes.
+AMIGA: ¡Miren! Van llegando los invitados.
+AMIGA La fiesta ya ha empezado.
+LECTORA 2: El carnaval se respira en el aire y las alegres melodías se suceden sin
+parar.
+LECTORA 1: Hoy todos los jóvenes de Verona se encuentran reunidos. Quieren
+divertirse.
+Mostrar sus mejores vestidos y sobre todo bailar y bailar.
+LECTORA 2: Sí ,conocen las músicas que suenan y los pasos de las danzas. Saben de
+palabras
+agradables y gestos corteses que se intercambian al encontrarse. Quieren
+enamorarse.
+LECTORA 3: Después de media noche las damas y los caballeros se reúnen en un
+círculo para el
+último baile.
+lgr Página 12
+LECTORA Y es en ese momento que Romeo da la mano a una dama que no conoce. Una
+chica
+encantadora
+ESCENA V
+(Salón de la casa de Capuleto.) (MÚSICOS esperando . Entran CRIADOS. )
+CRIADO PRIMERO ¿Dónde está Potpan, que no ayuda a levantar los postres? ¡Andar él
+con
+un plato! ¡Él, raspar una mesa!
+CRIADO SEGUNDO Cuando el buen porte de una casa se confía exclusivamente a uno o
+dos hombres y éstos no son pulcros.
+CRIADO PRIMERO Llévate los asientos, quita el aparador, ojo con la vajilla: -Buen
+muchacho, resérvame un pedazo de mazapán y, puesto que, me aprecias, di al portero
+que deje
+entrar a Susana.
+CRIADO TERCERO ¡Eh! aquí estoy, hombre.
+CRIADO PRIMERO Los necesitan, los llaman, preguntan por ustedes, se les busca en el
+gran salón.
+CRIADO TERCERO No podemos estar aquí y allá al mismo tiempo. -Alegría, camaradas;
+haya un rato de holgura y que cargue con todo el que atrás venga.
+(Se retiran al fondo de la escena.)
+lgr Página 13
+(Entran CAPULETO, seguido de JULIETA y otros de la casa, mezclados con
+los invitados y los máscaras.)
+SEÑOR CAPULETO
+¡Bienvenidos, señores! Las damas que libres de callos tengan los pies, los tomarán
+un
+rato por su cuenta. -¡Ah, ah, señoras mías! ¿Quién de todas ustedes se negará en
+este
+instante a bailar? La que se haga la desdeñosa, juraré que tiene callos. ¿Toco en
+lo
+sensible? -¡Bienvenidos, caballeros! [Tiempo recuerdo en que también me enmascaraba
+y
+en que podía cuchichear al oído de una bella dama esas historias que agradan. -Ya
+esa
+época pasó, ya pasó, ya pasó. -¡Salud, señores! -Ea, músicos, a tocar .¡Despejen un
+poco y
+a bailar ! ¿Cuánto hará desde la última vez que estuvimos en un baile de mascaras?
+(Tocan los músicos y se baila.)]
+LADY CAPULETO Por la Virgen, hace treinta años.
+SEÑOR CAPULETO ¡Qué, mujer! No hace tanto, no hace tanto: fue en las bodas de
+Lucencio.
+Venga cuando quiera la fiesta de Pentecostés, el día que llegue hará sobre veinte y
+cinco años
+que nos disfrazamos.
+LADY CAPULETO Hace más, hace más: Su hijo es más viejo, tiene treinta años.
+SEÑOR CAPULETO ¿Me dices eso a mí? Ahora dos era, él menor de edad.
+lgr Página 14
+ROMEO ¿Qué dama es ésa que honra la mano de aquel caballero?
+CRIADO [No sé, señor.]
+ROMEO Oh corazón ¿Amé yo antes de ahora? ¡Ojos, negarlo! Nunca hasta ahora conocí
+la
+belleza. Nunca antes.
+TEOBALDO
+Éste, por la voz, debe ser un Montesco. -Muchacho, tráeme acá mi espada. -¡Cómo!
+¿Osa el miserable venir a esta fiesta, cubierto con un grosero antifaz, para hacer
+mofa y
+escarnio en ella? Por la nobleza y renombre de mi estirpe no tomo a crimen el
+matarle.
+SEÑOR CAPULETO ¡Eh! ¿Qué hay, sobrino? ¿Por qué, estallas así?
+TEOBALDO Tío, ese hombre es un Montesco, un enemigo nuestro, un vil que se ha
+entrometido esta noche aquí para escarnecer nuestra fiesta.
+SEÑOR CAPULETO ¿Es el joven Romeo?
+TEOBALDO El mismo, ese miserable Romeo.
+SEÑOR CAPULETO
+[Modérate, buen sobrino, déjale en paz; se conduce como un cortés hidalgo y, a
+decir
+verdad, Verona le pondera como un joven virtuoso y de excelente educación. Por
+todos los
+tesoros de esta ciudad no quisiera que aquí, en mi casa, se le infiriese insulto.
+Cálmate
+pues,
+TEOBALDO
+Bien viene cuando un miserable semejante se tiene por huésped. No le aguantaré.
+PRIMER CAPULETO
+Lo aguantarás digo que sí. ¡Qué! ¡Señor chiquillo! Ve a pasear. ¿Quién de los dos
+manda aquí?
+TEOBALDO
+Pero, tío, es una vergüenza.
+PRIMER CAPULETO
+A paseo, a paseo, eres un joven impertinente. Mantente quieto, si no... -; ¡da
+vergüenza! -Teforzaré a estar tranquilo. [¡Vaya!
+lgr Página 15
+TEOBALDO
+La paciencia que me imponen y la porfiada cólera que siento, en su encontrada
+lucha,
+hacen temblar mi cuerpo. Me retiraré, pero esta intrusión que ahora grata parece,
+se
+trocará en hiel amarga.
+(SALE.)
+INICIA EL BAILE
+ROMEO (a JULIETA.) Si mi indigna mano profana con su contacto este divino relicario
+JULIETA Tu mano calienta la mía. Buen peregrino, eres injusto con tu mano,; pues
+las santas tienen manos que tocan las del piadoso viajero y esta unión de palma con
+palma
+constituye un palmario y sacrosanto beso.
+ROMEO ¿No tienen labios las santas y los peregrinos también?
+JULIETA Sí, peregrino, labios que deben consagrar a la oración.
+ROMEO ¡Oh! Entonces, santa querida, permite que los labios hagan lo que las manos.
+Pues
+ruegan, otórgales gracia para que la fe no se trueque en desesperación.
+JULIETA Las santas permanecen inmóviles cuando otorgan su merced.
+ROMEO (La da un beso en la mano.)
+NODRIZA Señorita, su madre quiere decirte una palabra.
+ROMEO ¿Cuál es su madre?
+NODRIZA
+Su madre es la dueña de la casa; una buena, discreta y virtuosa señora. Su hija,
+con
+quien hablabas, ha sido criada por mí.
+MERCUCIO ¡Es una Capuleto! ¡Es la hija de tu peor enemigo!
+ROMEO
+¿Es una Capuleto? ¡Oh, Mi vida es propiedad de mi enemiga.!
+lgr Página 16
+BENVOLIO
+Vamos, salgamos; harta fiesta hemos tenido.
+ROMEO
+Sí, tal temo yo; y mayor es mi inquietude. ¡Cuál alto es el precio!
+PRIMER CAPULETO (van saliendo los invitados.)
+Eh, señores, no. - ¿Ya se van? Bien, entonces doy gracias a todos: gracias, nobles
+hidalgos, buenas noches. -¡Más luces aquí! -Ea, vamos pues, a acostarnos. Ah,
+querido,
+(al Segundo Capuleto) por mi honor, se hace tarde; voy a descansar.
+(Vanse todos, menos JULIETA y la NODRIZA.)
+JULIETA Ven, nodriza: ¿Quién es aquel caballero?
+NODRIZA El hijo y heredero del viejo Tiberio.
+JULIETA ¿Quién, el que pasa ahora el dintel de la puerta?
+NODRIZA Sí, ése es, me parece, el joven Petruchio.
+JULIETA
+El que le sigue, con el que estaba platicando cuando me llamaste ¿quién es?
+Anda, pregunta su nombre.
+NODRIZA Se llama Romeo; es un Montesco , es el hijo único de tu gran enemigo.
+JULIETA
+¡Mi único amor emanación de mi único odio! ¡Demasiado pronto lo he visto sin
+conocerle y le he conocido demasiado tarde! Extraño destino de amor es, tener que
+amar
+a un detestado enemigo.
+NODRIZA ¿Qué dices, qué dices?
+JULIETA Un verso que ahora mismo me enseñó uno con quien bailé.
+(Llaman desde dentro a JULIETA.)
+NODRIZA Al instante, al instante. salgamos: los desconocidos... todos se han
+marchado.
+lgr Página 17
+SEGUNDO ACTO
+ESCENA 1
+AMIGA 4 ¡Qué arevido Romeo! ¿Pero que no estaba enamorado de Rosalía?
+AMIGA 2 Pues Sí, pero la belleza por quien anhelaba morir y por quien el amor
+lloraba,
+comparada con la tierna Julieta, aparece sin encantos.
+AMIGA 3 : ¡Una Antigua pasion yace ahora en su lecho de muerte y un joven afecto
+aspira a su herencia!
+AMIGA 4 : ¡Uy que dramática!
+AMIGA 3 . Romeo ama al presente de nuevo y es correspondido: uno y otro amante se
+han
+hechizado igualmente con su mirar.
+LECTORA Él, mirado como adversario, carecerá de entrada para pronunciar esos
+juramentos
+que acostumbran los apasionados; y ella, como él amorosa, tendrá muchos menos
+recursos para
+verse do quier con su bien querido
+AMIGA 4 fue un flechazo, un flechazo mortal de necesidad, se enamoraron hasta las
+entrañas,
+más adentro incluso, no había sitio en su cabeza para nada que no fuera su amor.
+Embrujados,
+los dos, al encontrar sus ojos.
+AMIGA: El suyo es un amor improvisado, pero bello y vivo como el sol que se oculta
+y resurge.
+No es un amor fácil porque sus familias los Capuleto y MOntesco se odian a muerte
+desde hace
+mucho tiempo.
+Amiga
+¡Qué desastre! Mira que enamorarse de su enemigo. Pero, ¿qué pasó? ¿Siguieron
+adelante?
+¿Rompieron? ¿Qué?
+Lectora
+Por favor, ¿tú qué crees? Siguieron adelante, Rome solo puede ver a Julieta por las
+noches cuando
+la oscuridad cubre como una mascara su cara y él puede trepar el muro de Verona y
+alcanzar el
+balcón de la dama sin que nadie le vea. ¡Se juraron amor eterno!
+AMIGA 3 ¡Por los siglos de los siglos… ¡Qué bonito! ¿No?
+lgr Página 18
+ESCENA 2
+MÚSICA (ESCENA DE AMOR ENTRE ROMEO Y JULIETA)
+ENTRA ROMEO
+ROMEO ¿Puedo alejarme, cuando mi corazón está aquí? Atrás, estúpida arcilla, busca
+tu
+centro.
+( ESCALA EL muro y salta al jardín.) (Entran BENVOLIO y MERCUCIO.)
+BENVOLIO ¡Romeo! ¡Mi primo Romeo!
+MERCUCIO No es tonto: Por mi vida, se ha escabullido de su casa para buscar su
+lecho.
+BENVOLIO Se ha corrido por este lado y saltado el muro del jardín. Llámale, amigo
+Mercucio.
+MERCUCIO Haré más, voy a mezclar su nombre con sortilegios. -¡Romeo! ¡Capricho,
+locura, pasión, amor!
+Yo te conjuro por los brillantes ojos de Rosalina, por su frente elevada, por sus
+purpúreos labios, por su lindo pie, su esbelta pierna, su regazo provocador, por
+cuanto más
+éste guarda, que te nos aparezcas en tu forma propia.
+BENVOLIO Si te oye, se enfadará.
+MERCUCIO Lo que digo no puede enfadarle. Enfado le causaría el que se hiciera
+surgir
+algún espíritu de extraña naturaleza en el círculo de su adorada Esto sería una
+ofensa; pero mi
+invocación es razonable y honrosa: yo sólo conjuro en nombre de su dama o para que
+él
+mismo aparezca.
+BENVOLIO Ven, se ha hecho invisible entre esos árboles, para unificarse con la
+húmeda
+noche. Su amor es ciego y se halla más a gusto en las tinieblas.
+MERCUCIO Si el amor es ciego, no puede dar en el blanco. Voy en busca de mi
+colchón:
+esta cama de campaña es, [para dormir], harto fría. Ea, ¿nos vamos?
+BENVOLIO Sí, marchémonos; pues es inútil buscar aquí al que no quiere ser hallado.
+SALEN
+lgr Página 19
+ESCENA 3
+(Jardín de la casa de Capuleto.) (Entra ROMEO.)
+ROMEO Se burla de las llagas el que jamás recibió una herida. (APARECE JULIETA)
+Pero ¡Silencio! ¿Qué resplandor se abre paso a través de aquella ventana? ¡Es el
+Oriente, y
+Julieta el sol!
+Alza, bella lumbrera y mata a la envidiosa luna, ya enferma y pálida de dolor,
+porque tú, la
+excedes mucho en belleza.
+JULIETA ¡Ay de mí!
+¡Nace mi amor, la fuerza que me oblige a amar a quien es mi enemigo!
+ROMEO ¡Habla! -¡Oh! ¡Prosigue hablando, ángel resplandeciente!
+JULIETA ¡Oh, Romeo, Romeo! ¿Por qué eres Romeo? Renuncia a tu padre, abjura tu
+nombre; o, si no quieres esto, jura solamente amarme y ceso de ser una Capuleto.
+ROMEO (aparte.) (dudando) ¿Debo hablarle ahora? …. O debo callar.
+JULIETA (se da cuenta que hay alguien escuchándola) ¿Quién eres tú que así envuelto
+en la noche, sorprendes de tal modo mis secretos?
+ROMEO ¡No sé cómo expresarte con un nombre quien soy? Mi nombre, cielo mío, yo
+mismo lo detest, por ser para ti un enemigo:
+JULIETA: ¿No eres Romeo? ¿No eres un Montesco?
+ROMEO: Ni uno, ni otro, Hermosa doncella, si los dos te desagradan.
+JULIETA: ¿Cómo has llegado hasta aquí? Es alto el muro del jardín, difícil de
+scalar.
+ROMEO: Con las alas livianas del amor salté estos muros, pues no hay cerca de
+piedra
+capaz de atajar e amor.
+JULIETA Si te encuentran acabarán contigo
+ROMEO: ¡Ay ! tus ojos son para mí más que veinte espadas suyas. ¡Juro por esa luna
+sagrada, que platea sin distinction…
+JULIETA: ¡Oh! No jures por la luna, por la inconstant luna, no sea que tu amor se
+vuelva
+tan variable.
+lgr Página 20
+ROMEO ¿Por qué debo jurar?
+JULIETA No hagas juramento alguno. Si te empeñas, jura por ti, dios de mi idolatría
+y te
+creeré
+VOZ DE NODRIZA ¡Julieta!
+JULIETA voy al momento. Si el matrimonio es tu fin. Hazme saber mañana por la
+persona que
+hare llegar hasta tí, en qué lugar y hora quieres realizar la ceremonia.
+VOZ DE NODRIZA ¡Julieta!
+JULIETA ¡Al instante ya voy! Pero si no es Buena tu intención, te ruego…
+ROMEO Por la salud de mi alma. Envíala mañana a las nueve.
+SALEN
+lgr Página 21
+ESCENA 4
+AMIGA 3. ¡Qué romantico! Aunque un poco, no se…. ese Shakespeare era un poco cursi
+¿No?
+TODAS ¡Nooo!
+(SILLA INTERIOR DE LA CASA)
+(ENTRA JULIETA COMO ESPERANDO A ALGUIEN, NERVIOSA)
+JULIETA. El reloj dab alas nueve cuando mandé a la nodriza. Me prometió estár en
+media hora…
+Quizá no haya podido hablar… Pero… no, eso no ¡Oh! ¡Es que es coja!
+(ENTRA LA NODRIZA AGOBIADA, CANSADA) ¡Oh dios, ya viene! (SE DIRIGE
+RÁPIDAMENTE A LA NODRIZA) ¡Ay nodriza de mi alma! ¡ ¿Qué noticia traes! ¿Le viste?
+¿Por qué ese aire tan apesadumbrado?
+NODRIZA ¡Estoy rendida! Déjame respirar un momento. ¡Ay qué dolor de huesos!
+JULIETA ¡Ojalá tuvieras tú mis huesos y yo tus noticias! ¡vaya, vamos, habla!
+NODRIZA ¡Jesús, qué prisa!. ¿No puedes aguardar un rato? ¿No ves que estoy sin
+aliento?
+¡Vaya que has hecho una equivocada elección! ¡No sabes escoger marido! Aunque tenga
+major
+rostro que los demás, su pierna aventaja a la de todos…
+JULIETA no, no, pero… ¡todo eso lo sabía yo ya! ¿Qué dice de nuestro caamiento?
+¿Qué dice?
+NODRIZA ¡Señor! ¡Cómo me duele la cabeza! ¡Qué cabeza tengo!
+JULIETA Te juro que lament no te halles bien querida nodriza, ¿Qué dice mi amor?
+NODRIZA ¿Tienes permiso para confesarte hoy?
+JULIETA SÍ
+NODRIZA Pues… entonde corre a la celda de Fray Lorenzo, allí te aguarda un marido
+para
+hacerte su esposa.
+JULIETA ¡Corramos a la dicha suprema! Fiel nodriza ¡adios!
+(SALEN)
+(lado izq)
+lgr Página 22
+AMIGA: ¡desean casarse!
+LECTORA Pero deciden mantenerlo en secreto hasta que las dos familias hagan las
+paces!
+AMIGA ¡qué atrevidos!
+AMIGA ¡Sí mucho, fue un flechazo, un flechazo mortal., se enamoraron hast alas
+entrañas, más
+adentro incluso, no había sito en su cabeza para nada que no fuera su amor.
+Embrujados los dos,
+al encontrar sus ojos.
+LECTORA Sí Romeo y Julieta disfrutan su propia felicidad, ligera y sin fin. Por la
+mañana, la
+ciudad aparece blanca como una novia. En el monasterio de San Francisco al ribera
+del río,vive un
+fraile que les puede ayudar. un hombre muy sabio. Amigo de Romeo y Julieta que les
+ecucha y acepta
+casarlos en secreto.
+AMIGA: Sí y un día fray Lorenzo hace entrar a Romeo en su celda y Julieta espera de
+rodillas en el
+confesionario como si quisiera confesarse.
+ESCENA FRAY LORENZO
+ESCENA 5
+LADO IZQUIERDO JULIETA (ENTRA) Buenas tardes a mi reverendo confessor. Se
+arrodilla.
+LADO DERECHO (ENTRA FRAY LORENZO Y LLEGA ROMEO)
+FRAY LORENZO Sonrían los cielos a esta sagrada ceremonia, para que los tiempos
+futuros no
+nos la reprochen con pesar.
+ROMEO (ENTRANDO) ¡amén!
+(JULIETA INTERCAMBIA MRADAS CON ROMEO)
+FRAY LORENZO Romeo te dará las gracias por él y por mí, hija mía.
+JULIETA: Igual le deseo a él, para que sus gracias no sean excesivas.
+FRAY LORENZO
+Vengan, vengan conmigo y abreviemos nuestra obra, porque con su consentimiento, no
+les
+permiti´re estar solos hasta que la Santa iglesia los haya incorportado a los dos
+en uno. (salen)
+(LOS CASA Y SALEN)
+lgr Página 23
+AMIGA: Esperan el momento preciso para hablar con sus familias y desvelar el
+matrimonio.
+Pero el odio entre los Montesco y Capuleto es cada vez más áspero y un día por las
+calles de
+Verona bajo la puerta Antigua los hombres de las dos familias se enfrentan y Romeo
+se ve
+envuelto en la pelea…
+LECTORA Uy es ahora cuando relamente se complica todo, el odio y el rencor entre
+las
+familias trae la violencia, la violencia trae muerte, la muerte venganza,,, y la
+venzanza engendra
+venganza.
+ESCENA 6
+(ENTRA MERCUCIO Y ATRÁS DE ÉL BENVOLIO) (LADO DERECHO)
+BENVOLIO ¡por favor, Mercucio, vámonos, el día es caluroso, los Capuleto andan por
+aquí. No
+escaparemos a una gresca.
+MERCUCIO
+¡Por mis talons, que me tienen sin cuidado!
+(ENTRA TEOBALDO) POR EL LADO IZQUIERDO
+TEOBALDO ¡Buenas tardes señores! Una palabra con uno de ustedes.
+MERCUCIO ¿Y solo una palabra con uno de nosotros? ¡Júntala con algo, para que sean
+una
+palabra y un golpe!
+TEOBALDO ¡Tú estás de concierto con Romeo!
+MERCUCIO ¡De concierto…! ¿Qué? Nos has tomado por músicos, no esperes oír más que
+disonancias. ¡Aquí está mi arco de violin! (saca la espada).
+BENVOLIO Estamo hablando en un paraje public. (tratando de tranquilizarlos) todos
+los ojos
+nos miran.
+MERCUCIO ¡Para mirar se hicieron los ojos! ¡Que nos miren! ¡Yo no dare gusto a
+nadie!
+(LLEGA ROMEO) (LADO DERECHO)
+TEOBALDO Bien, ¡Aquí, llega mi mozo! ¡Eres un villano!
+ROMEO : Las razones que tengo para apreciarte excusan tu saludo. (LE DA LA ESPALDA)
+TEOBALDO ¡Vuélvete y desenvaina (saca la espada)
+ROMEO ¡Gentil Mercucio, envaina tu espada!
+lgr Página 24
+(MERCUCIO Y TEOBALDO PELEAN)
+ROMEO ¡Teobaldo! ¡Mercucio! ¡El príncipe ha prohibido las riñas en las calles!
+¡Deténganse!
+(TEOBALDO HIERE A MERCUCIO POR DEBAJO DEL BRAZO DE ROMEO.
+MERCUCIO ¡estoy herido! ¡mala peste a sus familias! ¿Por qué diablos te
+interpusiste?
+(ROMEO Y BENVOLIO SE ACACHAN CON MERCUCIO)
+BENVOLIO ¡Romeo! ¡Ha muerto el bravo Mercucio!
+ROMEO (SACA LA ESPADA Y SE ABALANZA CONTRA TEOBALDO Y PELEAN)
+¡Esto lo decidirá! (HIERE A TEOBLADO Y ÉSTE CAE MUERTO).
+BENVOLIO ¡Romeo,…. Vete…. Huye!
+ROMEO ¡Soy juguete del destino! (SALE RÁPIDO)
+SALEN
+(ENTRA JULIETA , LA RODEAN LOS ACTORES GRITANDO )
+¡Exilio! ¡Exilio!
+JULIETA Romeo desterrado, ni fin , ni límite, medida o frontera hay en la muerte
+contenida de esas
+palabras, ni palabra que expresen ese dolor…
+(ENTRA ROMEO, RODEA UNA Y OTRA VEZ A LOS ACTORES, PERO EL MURO ES
+INFRANQUEBLE, DESESPERADO CAE DE RODILLAL, LLORA)
+ROMEO Más allá de Verona no existe el mundo para mí. ¡Tan solo el purgatorio, la
+tortura, el mismo
+infierno!.
+lgr Página 25
+AMIGA Romeo ha sido desterrado, y ¿entonces? Pero si se habían casado...
+LECTORA Ya, pues todavía hay algo peor, los Capuleto deciden casar a su hija,
+Julieta, con el conde Paris
+dentro de dos días...
+AMIGA ¡Pero si ya está casada!
+LECTORA Pero ellos no lo saben, y si lo supieran a lo mejor era peor, ¿no crees?
+Escucha: Ella
+prefiere morir a casarse con Paris, así que pide ayuda a Fray Lorenzo, él fue quien
+los casó en secreto, y
+entre los dos idean la forma de huir de la boda.
+(FRAY LORENZO LE DA LA PÓCIMA A JULIETA)
+Verás: Julieta tomará una pócima la noche anterior a la boda, la dormirá tan
+profundamente que
+parecerá muerta, por carta avisarán a Romeo, que vendrá por ella cuando despierte,
+a las treinta y seis
+horas, y juntos se irán lejos...
+AMIGA ¡Qué buena idea!
+LECTORA Sí funciona, sí, pero…
+AMIGA Pero ¿qué?
+Suena una música, entra en escena un actor corre por el escenario, entra otro que
+corre
+hasta encontrarse, uno le da un pergamino enrollado a su compañero, éste sale
+corriendo
+con él hasta que llega a un tercero que lo recibe, y sale de nuevo con él, y luego
+un cuarto,
+pero nunca llega a su destino, muere por el camino. El pergamino cae y llega hasta
+las
+niñas.
+AMIGA (Cogiendo el manuscrito y mirándolo asombrada.) ¿Qué es esto? ¿Qué ha pasado?
+LECTORA Que Romeo no recibió la carta.
+AMIGA ¿Cómo?
+LECTORA ¿Es que no lo entiendes? La carta nunca llegó a manos de Romeo, lo único
+que Romeo supo
+de Verona, fue que Julieta estaba muerta, en el sepulcro de los Capuleto.
+Amiga ¡Dios mío! ¿Qué hizo Romeo?
+Lectora Regresó a Verona, a morir junto a su amada. La muerte fue implacable con
+los dos amantes.
+Suena una música. Entra Julieta, se tiende despacio en el suelo, entra Romeo
+observa y
+acaricia a Julieta y se tiende cerca de ella, entra un actor con la tela negra a
+modo de capa y
+pasa sobre ellos ambos desaparecen, cae la tela, que es lo único que queda en
+escena.
+lgr Página 26
+(ENTRA ROMEO Y LA VE Y SE ACERCA)
+ROMEO (SE ENVENENA Y CAE A LOS PIES DE JULIETA) No podré vivir sin tí.
+LECTORA Murieron los dos, sus familias fueron castigadas. Romeo y Julieta pagaron
+con su vida por el
+odio y el rencor de sus familiares.
+AMIGA Fue terrible, no me gusta este final, es un asco. Podían haber sobrevivido
+¿no?
+Los ocho actores del escenario, se levantan, se acer can a las chicas y les tocan
+el hombro.
+JULIETA ¡Eh! Alegren esa cara.
+ROMEO Esto es teatro.
+TEOBALDO Y en el teatro todo está permitido
+.
+NODRIZA ¿Saben por qué?
+BENVOLIO porque el teatro es juego.
+MERCUCIO el teatro es magia
+FRAY Así que levántense! ¡Vamos!
+(SE LEVANTAN Y SUENA LA MUSICA Y TODOS SE PONEN A BAILAR).
+THE END
+`).then(e => console.log(`Código finalizado, ${e} mensagens
+enviadas`)).catch(console.error)
