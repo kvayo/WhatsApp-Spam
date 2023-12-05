@@ -1,0 +1,1407 @@
+async function enviarScript(scriptText){
+const lines = scriptText.split(/[\n\t]+/).map(line =>
+line.trim()).filter(line => line);
+main = document.querySelector("#main"),
+textarea = main.querySelector(`div[contenteditable="true"]`)
+if(!textarea) throw new Error("Não há uma conversa aberta")
+for(const line of lines){
+console.log(line)
+textarea.focus();
+document.execCommand('insertText', false, line);
+textarea.dispatchEvent(new Event('change', {bubbles: true}));
+setTimeout(() => {
+(main.querySelector(`[data-testid="send"]`) ||
+main.querySelector(`[data-icon="send"]`)).click();
+}, 100);
+if(lines.indexOf(line) !== lines.length - 1) await new
+Promise(resolve => setTimeout(resolve, 250));
+}
+return lines.length;
+}
+enviarScript(`
+
+
+
+PRIMER ACTO
+ESCENA I
+En la isla de Irilia.
+Funeral del hermano de Olivia.
+Canta Orsino, gobernador de Irilia.
+ORSINO: Ella puede matar con sus ojos de mar.
+Ella puede mentir y tu fe, destruir.
+Y ella solo te ve cuando quiere mirar.
+Es niña al jugar pero siempre es mujer para mí.
+Ella se deja amar y te deja volar.
+Ella saca verdad con mentiras detrás.
+Y ella acepta, si es gratis, la venta final.
+Y aunque roba y te miente ella siempre es mujer para mí.
+MARÍA: Escuchen bien, tendrán que pasar 7 años para que el bello rostro de
+la señorita vea una vez más la luz del sol…
+Porque como una monja de claustro, se va a tapar por completa,
+y se va a dedicar a llorar y llorar y llorar por su hermano muerto.
+ORSINO: Ohh… maldición de mujer.
+No saber del querer, no saber de perder.
+Oh música alimento del amor no te detengas hasta saciarme.
+Oh melodía que inundas mis sentidos
+y me regalas una sensación maravillosa para luego quitármela.
+Oh espíritu del amor, eres enorme como un océano
+y depredador sin discriminación alguna.
+Caprichosas son las formas del deseo.
+(canta) Ohh… de entregarse jamás,
+de sentir ni pensar,
+en su amor ni soñar.
+ESCENA II
+Playa de Irilia.
+Restos del naufragio en que las olas separaron
+a Viola y Sebastián, hermana y hermano gemelos.
+Ambos creen que el otro ha muerto.
+3
+VIOLA: Oh Sebastián, Sebastián ¿dónde estás hermano del alma mía?
+CAPITÁN: Calma, mi señora, si le sirve de consuelo le puedo decir que cuando
+usted y los pocos que nos salvamos nos aferrábamos al bote,
+su querido hermano, consciente del peligro que lo acechaba,
+se agarraba a un enorme palo que sobresalía de las aguas.
+La imagen era sobrecogedora y violenta a la vez,
+su hermano tan amado luchaba ferozmente abrazado a un tronco
+VIOLA: Gracias por sus esperanzadoras palabras...
+¿Conoce usted este lugar?
+CAPITÁN: Irilia, mi señora.
+VIOLA: Irilia… aquí gobierna un noble duque llamado Orsino,
+yo lo conozco, mi padre me habló de él...
+soltero si no me equivoco... ocúltese Capitán.
+(Se escucha el canto del cortejo fúnebre del hermano de Olivia)
+Ohh… la tristeza de amar
+ver la muerte llegar, imposible escapar.
+VIOLA: (oculta junto al capitán y los marinos) Y ella, ¿quién es?
+CAPITÁN: Es la bella Olivia, mujer virtuosa hija de condes.
+Su padre murió hace poco y hace nada murió su hermano.
+Dicen que por todos estos dolores juró nunca más acercarse a un
+hombre.
+VIOLA: Si consigo conocer a esa dama, será más fácil llegar al duque.
+CAPITÁN: Difícil, la señora no quiere saber de nadie.
+VIOLA: Es usted en extremo ingenuo mi capitán.
+Escuche bien porque esto es lo que vamos a hacer.
+Entraré como servidor a la corte del duque Orsino y me haré pasar
+por hombre… bueno por un jovencito.
+Usted no dirá una sola palabra.
+No lo voy a defraudar... yo sé cantar y puedo conversar de música
+con él.
+Dejaremos que el tiempo nos diga que puede resultar de todo esto.
+En cuanto a usted mi querido capitán, ajustará su silencio a mi
+ingenio.
+CAPITÁN: Haga usted de varoncito, que yo haré de mudo.
+Si abro la boca será que mis ojos se han cerrado para siempre.
+VIOLA: Magnífico.
+Canta. Yo le puedo cantar y mi voz escuchar.
+4
+A él le gusta soñar con sirenas de mar.
+Melodías y sueños le puedo enseñar.
+Seré un niño, seré un canto y ese hombre será para mí.
+ESCENA III
+Viola/Orsino/Cortejo fúnebre.
+Olivia se abraza histérica al féretro y plañe. Los demás cantan.
+Ohh…un cantar para amar
+un compás de querer, una pauta a perder.
+Ohh… es mi alma al llorar
+es mi alma al soñar, mi corazón desangrar.
+TOBY: (a María) Puta madre, ah?, se puede saber que le pasa a esta niñita.
+Está bien que se muera tu hermano pero las penas se pasan
+cantando… ¿o no? A rey muerto rey puesto (se toma un trago).
+MARÍA: Estimado señor Tobías, usted tiene claro que su sobrina no lo
+soporta ni a usted ni a su compadre…
+TOBY: Estimada señora María, lávese bien la boca si va a hablar de mi
+compadre Andrés, mire que no hay hombre de su calibre en toda
+Irilia… además tiene plata.
+MARÍA: Para tomársela.
+ANDRÉS: (que llega por detrás y le da una palmadita en el culo) Y para
+hacerte feliz…
+MARÍA: Ah estabas aquí.
+ANDRÉS: Yesssss sir. Y para servirla (va a dar el pésame a Olivia).
+TOBY: Es músico María, canta, toca, recita, escribe… hocicones los que
+hablan mal de él.
+MARÍA: Son los mismos que hablan mal de usted.
+TOBY: Yo solo bebo a la salud de mi querida sobrinita.
+MARÍA: Permiso señor…. Voy a rescatar a su querida sobrinita.
+ANDRÉS: Bien querido amigo, yo sé perder… me largo.
+TOBY: Te digo que la niñita se toma su tiempo antes de entrar en calores.
+ANDRÉS: Ni siquiera puedo hablar con tu famosa sobrina y no hay que ser
+muy inteligente para darse cuenta que al delicado Orsino algo le
+sucedió y que ahora lloriquea por los rincones y que, al parecer, el
+luto lo calienta como a una tetera.
+TOBY: A Olivia le gustan los hombres bien hombres… y ahí vas de
+ganador, recuerda que tú tienes un don.
+ANDRÉS: Ah… el don.
+TOBY: No es este mundo para esconder las virtudes. Menos si de cabriolas
+se trata.
+5
+ESCENA IV
+Termina el cortejo fúnebre.
+FABIÁN: (suelta una ráfaga de metralla insoportable)
+Salvas para honrar al muerto.
+OLIVIA: Saquen de aquí a este loco.
+FABIÁN: Ya todos escucharon saquen de aquí a esta loca.
+MARÍA: ¡Qué fue lo que dijiste bruto insolente!
+FABIÁN: ¿Podemos saber donde su hermano se ha ido?
+OLIVIA: Mi hermano querido al cielo se ha ido.
+FABIÁN: Entonces usted tendría que estar alegre.
+OLIVIA: Pero estoy triste.
+FABIÁN: Entonces, ¿quién es el que se encuentra loco?
+OLIVIA: ¡Llévense a este terrorista!
+FABIÁN: Ya escucharon, llévense a la señorita.
+OLIVIA: Basta, suficiente (lo aparta).
+A ti la guerra te ha dejado muy violento.
+Fuiste un fiel servidor pero ya no necesito guardia personal además
+estoy agotada de tu presencia.
+FABIÁN: Esos son defectos que se arreglan rápidamente señora.
+Irilia se ha puesto muy peligrosa y una señorita como usted debiera
+tener quien la cuide.
+OLIVIA: Malvolio, ¿qué opinas de este señor?
+Crees que se pueda “enmendar”.
+MALVOLIO: En el preciso momento justo en que venga a sacudirlo el estertor de
+la muerte.
+La violencia, mi señora, es la ruina de los pacíficos y la tumba para
+los psicóticos.
+FABIÁN: Mal no estaría su Dios en enviar a usted unas gotas de psicosis.
+OLIVIA: Y, que dices a eso Malvolio.
+MALVOLIO: Las personas sensatas que creen en estos idiotas para que los
+defiendan son sólo un reflejo de su propia estupidez.
+OLIVIA: Cuan enfermo estás de autosuficiencia Malvolio.
+Hay que ser muy torpe para tomar por bolas de cañón a inocentes
+postones.
+A quien podría ofender este terminal, violento pero fiel “soldado”.
+Ha sido un largo día señores. Adiós querido hermano.
+Me sumerjo en la oscuridad. I want to be alone!
+6
+ESCENA V
+ORSINO: (entrando) Violo.
+VIOLA/VIOLO: Presente señor, aquí dispuesto a todo servicio.
+ORSINO: Ha pasado casi un año ya de la muerte del hermano de la duquesa
+Olivia y nos aprestamos a celebrar un nuevo día nacional de Irilia.
+Por tanto jovencito… es hora de trabajar.
+Tú ya sabes todo sobre mí, te he abierto el libro donde escondo los
+secretos de mi corazón.
+Llega hasta Olivia, cuéntale que soy yo quien te envía y no
+permitas que te rechace.
+VIOLA/VIOLO: Así lo haré, mi querido señor.
+Mas, si es verdad que la señora figura lloriqueando el día entero, no
+sé si tenga muchas ganas de recibirme.
+ORSINO: Anda mas allá de todos los límites que impone la cordura y la
+cortesía. ¡Te saltas todas las reglas! ¡Y no se te ocurra volver sin
+resultados!
+VIOLA/VIOLO: Muy bien, consigo verla… ¿qué le digo?
+ORSINO: (muy encima de Viola/Violo) Descúbrele entonces toda la pasión
+que hay en mí, sedúcela hablándole de mi fe sincera.
+Tú sabrás, con tus encantos tan particulares, transmitirle mi dolor.
+La elocuencia y belleza de tu juventud serán la llave perfecta para
+abrir la cerradura de su corazón.
+VIOLA/VIOLO: No lo creo, no va a resultar.
+ORSINO: Créelo mi querido cachorrito mira que con tu vocecita de cristal y
+tus labios suaves y encendidos la harás dudar de todo.
+Tu lo harías muy bien de mujer… a ti te destinaron los Dioses para
+esta empresa.
+Si logras tu propósito querido jovencito quedaremos unidos de aquí
+a la eternidad.
+VIOLA/VIOLO: Lo voy a intentar. Seduciré a la dama.
+(aparte) ¡Complicada empresa!
+¡Coquetear en su nombre cuando lo quiero por marido!
+ESCENA VI
+Entra Fabián a punta de balazos, mientras “entrena” a Olivia.
+FABIÁN: ¿No le gustó…?
+OLIVIA: No.
+MARÍA: Señora, en la puerta hay un jovencito que insiste en hablar con
+usted.
+OLIVIA: ¿Quién lo recibió?
+7
+MARÍA: Su pariente… el señor Tobías.
+OLIVIA: Dios mío que vergüenza, Tobías no dice más que tonterías.
+Malvolio, vaya usted por favor.
+Si es enviado del conde le dice que estoy enferma o que salí o lo
+que sea pero que se vaya (sale Malvolio).
+(a Fabián) Bien mi querido guardia personal, ya te habrás dado
+cuenta cuan pasado de moda está tu metralleta
+Entra Toby.
+OLIVIA: (a Toby) Primo, ¿quién es el que está a la puerta?
+TOBY: Algo muy raro...mmh ¡¡malditos los licores con leche!!
+(a Fabián) Fabián… Que se cuenta compañero.
+OLIVIA: ¿Cómo llegas tan temprano, ebrio y gritando?
+TOBY: Shhhhh! Sobrinita querida hay alguien esperando.
+OLIVIA: Fabián, hazte cargo. Veremos si sirves de algo.
+Salen entra Malvolio.
+MALVOLIO: Señora este jovencito insiste en verla.
+OLIVIA: Dígale que no va a conseguir verme.
+MALVOLIO: ¿Y usted que cree que he hecho todo este rato?
+Es insufrible y le aseguro que en cualquier momento empieza a
+gritar.
+OLIVIA: Malvolio… ¿qué tipo de hombre es?
+MALVOLIO: Amanerado y de malas maneras.
+OLIVIA: ¿Cuántos años tiene? Su aspecto ¿cómo es?
+MALVOLIO: Para ser hombre le faltan años y para muchachito le sobran.
+Camina claramente entre dos aguas.
+Podríamos decir que todavía en sus labios le queda leche… de su
+madre claro.
+OLIVIA: Que pase. María, escucharemos, una vez más, al embajador de
+Orsino.
+ESCENA VII
+Entra Viola/Violo.
+VIOLA/VIOLO: ¿Quién es la honorable señora de esta casa?
+MARÍA: ¡Señorita!, y la boquita le queda donde mismo.
+OLIVIA: Hábleme a mí. Yo responderé por ella. ¿Qué quiere?
+VIOLA/VIOLO: Oh la más radiante y exquisita. Oh belleza incomparable. Oh…
+OLIVIA: Bien saltémonos la poesía... ¿De dónde vienes?
+8
+VIOLA/VIOLO: Traigo el texto estudiado así es que por favor gentil señora.
+MARÍA: Señorita.
+VIOLA/VIOLO: Señorita… dígame si es usted la señorita de esta casa para poder
+comenzar mis palabras.
+OLIVIA: ¿Orsino envió un actor?
+VIOLA/VIOLO: No. Sin embargo juro que no soy lo que represento.
+¿Es usted la señorita de esta casa?
+OLIVIA: Sí, lo soy.
+VIOLA/VIOLO: El mensaje que traigo atañe sólo a vuestros oídos.
+OLIVIA: ¿Tiene que ser en español antiguo?
+VIOLA/VIOLO: Vengo en son de paz…
+OLIVIA: No fue muy cortes su debut.
+VIOLA/VIOLO: Fui tan cortés como su bienvenida…
+OLIVIA: ¿Quién eres? ¿A qué has venido?
+VIOLA/VIOLO: En cuanto a quién soy y a que vengo son cosas tan íntimas como lo
+es la virginidad: Cosas divinas para decir al oído y muy profanas
+para que las escuchen los demás.
+MARÍA: Ya entendimos (se va).
+OLIVIA: Puedo escuchar ahora esas cosas tan divinas… veamos mi querido
+actor…. Comience a recitar.
+VIOLA/VIOLO: Oh mí dulcísima señora…
+OLIVIA: La zalamería la dejamos fuera… vamos a los contenidos.
+¿Dónde está el argumento?
+VIOLA/VIOLO: En el corazón de Orsino.
+OLIVIA: ¿Ah sí? ¿En qué capítulo?
+VIOLA/VIOLO: En el primer capítulo de su pecho.
+OLIVIA: Me lo conozco de memoria. Algo más que añadir.
+VIOLA/VIOLO: Ya po’ ¡Déjame mirarte!
+OLIVIA: Creo que se está excediendo en su papel mi querido actor, pero está
+bien hagámoslo… descorramos el telón para que puedas ver bien la
+escena.
+(se va encima de de Viola/Violo) ¿Algún cambio en la
+escenografía? ¿Alguna imperfección?
+VIOLA/VIOLO: Hecho por Dios.
+OLIVIA: Hecho para resistir al tiempo.
+VIOLA/VIOLO: Orgullosa, arrogante, y aunque fuera usted el mismísimo demonio,
+seguiría usted siendo bella.
+El conde la ama. Y un amor como ese debiera encontrar
+recompensa.
+OLIVIA: Háblame de su amor.
+VIOLA/VIOLO: Se consagra a usted con don de lágrimas, truena como un rayo
+enamorado... y en sus suspiros descansa.
+9
+OLIVIA: Tu jefe me conoce. Y sabe que no puedo amarle.
+Yo sé que es un hombre cabal, pero no puedo amarle.
+Y también que, desde mucho tiempo, conoce mi respuesta.
+VIOLA/VIOLO: Si yo fuera el señor Orsino y la amara a usted de la forma en que el
+la ama…
+OLIVIA: ¿Qué harías?
+VIOLA/VIOLO: Me estacaría en la entrada de esta casa y gritaría hasta que mi alma
+partiera la puerta en dos.
+Escribiría las más eróticas serenatas y te las cantaría en tu ventana
+en medio de la más oscura de las noches.
+Gritaría tu nombre a través de los cerros para que el eco no te
+dejara en paz y de esa forma no encuentres el descanso jamás.
+Le aseguro, señorita, que usted quedaría atrapada entre la tierra y el
+viento hasta que de mí se compadeciera.
+OLIVIA: (pausa muy larga. Olivia hierve) Corre donde tu jefe y déjale claro
+que yo no puedo amarle… y que no quiero ningún tipo de
+embajador que no seas tú.
+Corre y dime cual es su reacción.
+Anda con Dios. Pero ¡ándate ya! Y por favor acepta estas monedas.
+Gracias. Gracias. Gracias.
+VIOLA/VIOLO: Guarde su dinero. Es el señor Orsino y no yo quien merece la
+recompensa. Adiós belleza cruel (se va).
+OLIVIA: Cachorro insolente, que digo, bestia insolente.
+Tu lengua, tu cara, tu boca… calma Olivia, calma.
+Tan fulminante puede ser el hechizo.
+Siento como todas sus imperfecciones de medio hombre y medio
+niño se introducen en mí, sutiles e invisibles, deslizándose sobre
+mis ojos…
+Que sea. Dejémoslo ser.
+(llama) ¡Malvolio! ¡Malvolio!
+MALVOLIO: Aquí, señora a su entero servicio.
+OLIVIA: Corre detrás de ese insolente mensajero y entrégale este anillo que
+dejó olvidado.
+Dile, además, que no quiero el anillo, dile, también, que no le dé
+esperanzas a Orsino porque no seré suya y si ese mensajero vuelve
+por estos lados, y encárgate que sea mañana mismo, yo sabré darle
+mis razones.
+Corre Malvolio. Corre.
+MALVOLIO: Corro señora (corre).
+OLIVIA: No sé que estoy haciendo... ¿o si lo sé?
+Mucho temo que por mis ojos haya entrado demasiada alegría para
+mi mente en luto.
+(Ataca la música de la canción “Viaje tiempo atrás”)
+10
+Muestra tu poder destino.
+Porque del deseo no somos su dueño.
+Sea como tú lo has decretado. Sea.
+SEGUNDO ACTO
+ESCENA I
+Apartada, en los prados del castillo de Olivia.
+VIOLA/VIOLO: Anda vamos ya, corazón no temas no te vas a detener.
+Me parece que tengo mil opciones,
+no se a quien volveré a ver,
+o que tan lejos llegaré,
+con disfraces sin verdad.
+Oh, Sebastián, mi querido hermano, ¿estarás vivo?, ¿estarás
+muerto? no me dejes sola, eres lo único que queda de mi familia.
+Oh familia, Oh mamá, Oh papá, Oh Orsino, Oh Sebastián.
+Aparece Sebastián en escena seguido de cerca de Antonio.
+SEBASTIÁN: En algún lugar, alguien me recuerda, sueño que se hará verdad,
+me recibirá con gran bienvenida,
+finalmente sin llorar,
+solo sueño con volar
+en un viaje.
+VIOLA/VIOLO/SEBASTIÁN: Tiempo atrás.
+ANTONIO: Pero si en estas montañas estábamos tan bien… supongo que no me
+vas a dejar botado.
+SEBASTIÁN: Por favor, te lo ruego… no.
+Mi estrella solo pone sombras sobre mi cabeza… necesito seguir
+solo con mi desgracia.
+Tú no te mereces algo así.
+ANTONIO: Pero dime por lo menos qué es lo que vas a hacer.
+SEBASTIÁN: Vagar, y no me pidas que te cuente lo que quiero guardar como un
+secreto.
+Antonio, tú me salvaste la vida, me libraste de ser tragado por las
+olas.
+ANTONIO: Oh trágico día, pero no fui yo, querido Sebastián.
+Fue el tronco el que te salvó.
+SEBASTIÁN: Dicen que mi hermana gemela era preciosa... Era igualita a mí
+11
+(llora)… Se ahogó Antonio, se ahogó en aguas amargas y esa
+amargura inunda mis recuerdos.
+ANTONIO: Perdóname Sebastián, perdóname por no haberte acogido como se
+debe.
+SEBASTIÁN: No, no… perdóname tú por angustiarte de esta manera.
+ANTONIO: Si no quieres que me muera de la pena, te ruego que no me
+abandones… déjame ayudarte Seba… por fa!
+SEBASTIÁN: Si no quieres matar al que salvaste olvídate de mí ahora. Déjame
+partir por favor y no me hagas llorar, mira que tanto queda en mí de
+la influencia materna que por más leve que sea el motivo se me
+llenan los ojos de lágrimas.
+Me voy a la corte del duque Orsino... era amigo de papá. Adiós.
+Sale.
+ANTONIO: Te vas justo al lugar menos indicado. No te imaginas la cantidad de
+enemigos que tengo en Irilia. Pero me da lo mismo. Tú eres mi
+familia. Yo te adoro y no me importa lo que digan. Tanto te quiero
+que los peligros parecerán juegos de niñitas. ¡¡¡Allá nos vemos!!!
+ORSINO: Oh la familia,
+el refugio del amor universal.
+Oh la familia
+quien no corre y corre más hasta encontrarte.
+VIOLA/VIOLO: Paso a paso iré, correré con fuerzas,
+No sé donde iré a parar.
+SEBASTIÁN: Voy a ese lugar a cambiar mi vida.
+Ser un hombre de verdad
+ANTONIO: Si voy tras mi ideal,
+corran sin parar,
+hoy he de volver atrás.
+Tener por fin
+mi hogar.
+ESCENA II
+Mismos prados.
+Malvolio encuentra a Viola/Violo que medita.
+MALVOLIO: Veo que no le duró mucho el vuelo.
+VIOLA/VIOLO: Es cierto; es que estos prados me traen muchos recuerdos.
+MALVOLIO: Mmmmm ya. Bien jovencito vengo a devolverle este anillo que mi
+señora dice que le pertenece a usted.
+También aprovecho de recordarle que aunque su patrón se irrite
+12
+tiene que dejarle claro que mi señora…
+VIOLA/VIOLO: Señorita…
+MALVOLIO: …La señorita nada quiere con él.
+La… señorita pidió expresamente que no se tome el trabajo de
+volver con mensajes de tu patrón...
+VIOLA/VIOLO: El señor Orsino…
+MALVOLIO: Que no se tome el trabajo de volver con mensajes de su patrón a
+menos que sea para contarle como le cayó la idea de no verla nunca
+jamás.
+Claro, como el agua.
+VIOLA/VIOLO: Ese anillo no es mío, no sé de dónde lo sacó!!
+MALVOLIO: Mira, pequeño saltamontes, el anillo lo tiramos al suelo.
+Tal vez vale la pena que te agaches a recogerlo.
+De lo contrario se lo dejas de comida a los pajaritos.
+Farewell dear (se va).
+VIOLA/VIOLO: Yo no dejé ningún anillo… ¿qué le pasa a esa mujer?
+¿Será que se ha hechizado? Me ama, estoy seguro. Se enamoró. Y
+por eso inventa cosas ¡Soy un hombre! ¡Eso es! Se enamoró del
+hombre que vio.
+Pobrecita… se enamoró de un sueño. Disfraz… disfraz, enorme es
+tu seducción y tu maldad. Espejito, espejito mírame... mírame…
+¿Que ocurrirá ahora?
+Orsino la adora y yo, pobre monstruo, de él estoy enamorada… y
+ella… ella se enamoró de mí.
+(se mira al espejo) No. Ella se enamoró de ti.
+Que día más triste, cuan inútiles los suspiros de Olivia.
+Al parecer este callejón ya no tiene salida.
+ESCENA III
+Cocina del castillo de Olivia.
+Están cantando muy embriagados.
+Toby, Andrés y Fabián están en el final del bolero “Señor abogado”.
+TOBY/ANDRÉS/FABIÁN: … (canta)
+Lo que vi esa noche no es para contarlo,
+ella me engañaba con otro querer.
+Muy desesperado busqué en el ropero
+un arma de fuego y la acribillé.
+Ella era mi vida, ella era mi todo,
+ahora que está muerta para que vivir.
+13
+Por eso le ruego, señor abogado
+no quiero clemencia… prefiero morir…
+ANDRÉS. Excelente, excelente.
+TOBY: Magnífica canción, absolutamente de acuerdo con el muchacho
+nada como matar por amor. Nada…
+FABIÁN: ¿Y que es amor?, ¿qué crees que tú que significa amor?
+¿Acaso crees que se trata de decirse en dos palabras “te quiero” y
+nada más?
+¿Y qué es amor?, para mí el amor no es así.
+ANDRÉS: Qué es eso… ¿pero a ti te caparon?
+TOBY: Que bella voz, si te caparon fue un trabajo notable.
+Te felicito.
+ANDRÉS: Yo no.
+FABIÁN: Échame a mí la culpa de lo que pase.
+ANDRÉS: Eso está mucho mejor… Cúbrete tú la espalda con mi dolor.
+ANDRÉS/FABIÁN/TOBY: (cantan)
+Que allá en el otro mundo
+en vez de infierno encuentres gloria.
+Y que una nube de tu memoria me borre a mí.
+Entra María interrumpiendo la canción.
+MARÍA: Esa sí que está buena, sigan gritando y en dos minutos aparece
+Malvolio y los pone a todos de patitas en la calle.
+TOBÍAS: (borracho) EHHHH, han llegado las diosas!!!!!!
+Mujer si puedes tú con Dios hablar, pregúntale si yo alguna vez te
+he dejado de adorar.
+ANDRÉS: Traiga amiga más licor para beber….
+MARÍA: ¡Cierren la boca por el amor de Dios!
+Entra Malvolio.
+MALVOLIO: Respetables señores. ¿Se han vuelto locos? ¿Qué es esto?
+No les queda juicio, ni educación, ni decencia.
+Algarabía de burdel parece el espectáculo que brindan.
+¡¡Es medianoche señores!!
+¿Confundieron con un lupanar la casa de mi señora, vociferando
+basura sin ningún control de vuestra voz?
+TOBY: ¿Dijo “vuestra voz”?
+MALVOLIO: Con toda la franqueza del mundo señor Tobías:
+me ha encargado mi señora dejarle claro que el recibirlo como
+pariente en esta casa no supone la aceptación de las costumbres de
+14
+su mal vivir. Si es usted capaz de deponer estas conductas será muy
+bienvenido.
+De lo contrario os ruego que abandone cuanto antes esta casa usted,
+y toda su cáfila patética de terminales caballeros.
+TOBY: (carraspea y toma aire) Re menor maestro.
+(empieza a cantar) Atiéndeme, quiero decirte algo…
+MARÍA: Se te está pasando la mano Toby.
+TOBY: Que quizás no esperes, doloroso tal vez.
+ANDRÉS: Escucha bien, que aunque me duela el alma,
+yo necesito hablarte y así lo haré…
+MALVOLIO: Mi señora María, si usted no despreciara los favores de la señora
+rechazaría toda complicidad con la estúpida y lasciva conducta de
+estos señores.
+Informaré de todo.
+El tono es La menor, señores; y además calan las notas.
+TOBY: ¿Calan?… ¿Calan? ¿Yo calo, tú calas, él cala?
+¿Te atreves a llamarnos desafinados? ¿Nosotros?
+Esto si no lo voy a aceptar. Esto es una blasfemia.
+¿Y usted se ha calado a alguien alguna vez patético profesor de
+canto y de baile de señoritas?
+Qué, ¿nos va a castigar? ¿Nos vas a dejar sin cerveza?
+FABIÁN: No, no pue’, no pue’, no pue’.
+si quieren nos callamos, pero sin cerveza no.
+ANDRÉS: (canta) Te juro que te adoro
+y en nombre de este amor y por tu bien te digo adiós…
+María, más vino.
+Se larga Malvolio portazo incluido.
+TOBY: Pobre y patético maestro de música… enamorado de mi sobrinita
+que odia cada nota musical.
+ANDRÉS: Cabrón! Lameculo y abstemio… lo peor.
+MARÍA: Paciencia señores… paciencia y silencio porque las últimas visitas
+del cachorrito a mi señora la han dejado muy inquieta…
+TOBY: Caliente María, caliente es la palabra.
+MARÍA: Bueno, esa misma calentura es la que llevará a la ruina a Malvolio.
+ANDRÉS: A ver eso me gustó, cuéntame más de Malvolio.
+MARÍA: Tiene votos de castidad… se azota por las noches… es
+fundamentalista, ultraconservador y…. caliente.
+Pero el hombre es tan seguro de sí mismo que jura que la señora
+algún día se enamorará de él…
+En esa ceguera encontraremos el camino a la venganza por todo lo
+que nos ha ninguneado.
+15
+TOBY: Ya, ¿y?
+MARÍA: Yo sé imitar la letra de mi señora y le enviaré cartas para que sueñe
+con que la duquesa lo ama.
+Dejaremos la misiva en un lugar donde todos podamos ver sus
+reacciones para saber si el asunto funciona.
+Buenas noches señores…
+TOBY: Puta, ¿harto habilosa la cocinera no?
+ANDRÉS: Y harto rica y harto ganosa…
+TOBY: Una hembra como las de antes… generosa.
+ANDRÉS: Si no conseguimos a tu sobrina nos quedamos con la cocinera.
+TOBÍAS: (mientras van saliendo con Andrés)
+Tú sabes que yo ya pasé por ahí.
+ANDRÉS: ¿En serio…?
+ESCENA IV
+Castillo del Conde Orsino.
+ORSINO: Ven aquí cachorro.
+Si llegas a enamorarte piensa en mí cuando las penas de amor
+lleguen a ti.
+Soy, en verdad, como todos los amantes.
+Voluble, poco claro en las inclinaciones, excepto, en la imagen de
+la criatura objeto del amor.
+Apuesto que a pesar de tus pocos años tus ojos ya se habrán posado
+en algún objeto del amor… ¿no es así?
+VIOLA/VIOLO: Sí… un poco.
+ORSINO: ¿Cómo es ella?
+VIOLA/VIOLO: Como tú.
+ORSINO: Entonces no es para ti. ¿Cuántos años tiene?
+VIOLA/VIOLO: Los tuyos… más o menos…
+ORSINO: Muy vieja… no jovencito, el amor se agota muy pronto.
+VIOLA/VIOLO: Así espero.
+ORSINO: Oh espíritu del amor eres enorme…
+Que todo el mundo se retire.
+Y tú (a Violo/Viola), visitarás inmediatamente a esa perra cruel y le
+dirás que mi amor, noble como las estrellas, pagará lo que sea.
+VIOLA/VIOLO: ¿Y si no quiere amarte?
+ORSINO: No lo podré soportar.
+VIOLA/VIOLO: Lo vas a soportar.
+Supongamos por un instante que hay una mujer que sufre por su
+amor tanto como usted sufre por Olivia, y que usted no la ama y
+16
+más encima se lo dice... ¿qué? ¿Tendría que resignarse?
+ORSINO: No hay un corazón de mujer que pueda soportar los latidos de la
+pasión que destruyen mi pecho.
+No hay un corazón de mujer que pueda soportar aquello porque son
+inconstantes.
+El amor del corazón de una mujer podríamos acusarlo de ser solo
+un apetito. No es un impulso de las viseras sino del paladar que se
+sacia y se hastía hasta vomitar.
+VIOLA/VIOLO: Yo sé, sin embargo….
+ORSINO: Tú, ¿qué?
+VIOLA/VIOLO: Yo sé cuánto puede amar una mujer…
+Mi padre tuvo una hija que se enamoró de un hombre como si lo
+hiciera yo.
+Si yo fuera una mujer, me enamoraría de usted.
+ORSINO: ¿Y?
+VIOLA/VIOLO: Y… nada.
+Él nunca descubrió este amor.
+ORSINO: ¿Tú hermana murió de amor?
+VIOLA/VIOLO: Es que yo soy todas las hijas de la casa de mi padre y soy todos los
+hijos también… y soy todos los hermanos y… ¿quiere que vaya a
+ver a Olivia?
+ORSINO: Entrégale este anillo y dile que mi amor no da un paso atrás ni
+tampoco acepta la derrota, menos a minutos de celebrar un nuevo
+día nacional de Irilia.
+ESCENA V
+Sala de música del castillo de Olivia.
+Vemos a Malvolio en sus estudios de hannon en el piano a toda
+velocidad por el teclado, mientras a prudente distancia,
+encaramados en una colina con sendos binoculares,
+se encuentran Toby, Fabián y Andrés.
+Luego llega María.
+TOBY: (a Fabián) ¿Y a ti quién te invitó?
+FABIÁN: Este ultrareligioso y ultrapiadoso señor…
+ANDRÉS: No fue esa la pregunta.
+FABIÁN: Se acuesta con mi mujer.
+TOBY/ANDRÉS: What!
+FABIÁN: Viste María, te dije que aparte de viejos eran tontos.
+ANDRÉS: Puta, el insolente. ¿A vos quién te autorizó…?
+17
+MARÍA: Silencio.
+Este es el momento en que deja sus espeluznantes escalas y toma
+su libro de Beethoven y ahí debiera encontrar la…
+MALVOLIO: ¡¡Dios!!
+FABIÁN: Lávate la boca antes de nombrar a Dios.
+MALVOLIO: Dios, esto no puede ser.
+FABIÁN: Puta y dale…
+MALVOLIO: En realidad sí puede ser.
+María alguna vez me dijo que de enamorarse mi señora, lo haría de
+un hombre de mi nivel.
+TOBY: Cuál de todos los niveles.
+MALVOLIO: De mi estatura, de mi capacidad.
+TOBY: ¿Capacidad para qué?
+ANDRÉS: ¿Por qué no lo matamos de un balazo?
+FABIÁN: Un balazo directo a la cabeza.
+TOBY: Tranquilos señores, tranquilos.
+MALVOLIO: Tengo la experiencia que me ha dado Isabel.
+FABIÁN: Mejor un balazo en las pelotas.
+ANDRÉS: ¿Quién es Isabel?
+MARÍA: (refiriéndose a Fabián) Su mujer.
+ANDRÉS: Sí, mejor en las pelotas.
+MALVOLIO: Veamos que tenemos aquí (lee en voz baja).
+ANDRÉS: Pero este idiota se puso a leer en silencio.
+¿Cómo vamos a saber que dice la maldita carta?
+MARÍA: La escribí yo, tarado.
+TOBY: ¿Y?...
+MARÍA: Nada… que estaba enamorada de él, que amaba su risa loca.
+TOBY: ¿Su risa loca?
+MARÍA: Si y también esa manera estrafalaria de vestirse.
+FABIÁN: Pero si ese mojigato viste de negro.
+MARÍA: En la carta le pide que cambie por completo sus costumbres y que
+busque colores vivos y telas brillantes, que se dé con la huasca por
+las noches pensando en sus pechos, que se apriete el silicio a la
+altura de las ingles hasta quedar mora’o…
+TOBY: Que pluma notable, ¿lo redactaste tú?
+MARÍA: Por supuesto y me reservo lo que le pide que haga con las velas.
+MALVOLIO: ¡No!
+MARÍA: ¡Sí!
+MALVOLIO: No, no, no, pero que mujer adelantada.
+MARÍA: Además, le pide que si quiere tener acceso a su delicada flor que
+aún no ha sido visitada por abejita ninguna…
+18
+MALVOLIO: Ahora verás lo que es un abejorro.
+ANDRÉS: ¡Yo te voy a enseñar lo que es una lanceta!
+FABIÁN: Yo te voy a mostrar lo que hago con tu lanceta.
+TOBY: Estuviste brillante María veo que no te privaste…
+MARÍA: Para nada… y que si quiere llegar hasta su bella flor tendrá que
+sorprenderla con algo desatadamente lujurioso…
+Y si no me falla la memoria en este momento debiera comenzar a
+practicar un…
+Malvolio suelta un Do de pecho nunca visto.
+MALVOLIO: Dooooooooooooooooooooooooooooooo!
+TOBY: Oh my god, plis come to me in this moment.
+ANDRÉS: Jesuscrist, qué fue eso.
+FABIÁN: María, ¿cómo se te ocurre ponerlo a cantar ópera?
+Es totalmente impresentable.
+TOBY: Por favor alguien que lo calle.
+MALVOLIO: Oh Dios, Oh Dios del cielo
+Oh Dios, A ti se levanta nuestra voz.
+(Trompetería).
+TOBY: No lo puedo creer (poniéndose de pie) el himno nacional de Irilia.
+ANDRÉS: (Poniéndose de pie y poniendo su mano en el corazón)
+Oh Dios esto no puede estar sucediendo.
+La colorada! ¡¡¿Dónde quedó la colorada?!!
+MARÍA: (sacando su bandera de Irilia. La colorada)
+La patria nos llama caballeros.
+El escenario comienza a transformarse, hasta todos llegar a la plaza pública desde
+donde todos entonan el himno de Irilia rebozados de patriotismo y
+erotismo placentero.
+Cantan
+ORSINO: Pueblo de Irilia, ¡hora del nostro amor!
+MALVOLIO: Todo por ti, por tus amores bellos,
+los corazones saltan de amor
+TODOS: Oh nuestra Irilia, todo placer.
+Oh libertad, es mi tierra.
+Oh nuestra patria, muero por ti.
+Gloria a tu nombre, glorias a ti
+19
+Se van todos, queda Olivia y Violo/Viola
+TERCER ACTO
+ESCENA I
+Olivia y Violo/Viola, a solas
+OLIVIA: Siempre vuelves.
+VIOLA/VIOLO: Está bien, aquí estoy una vez más enviado para inspirarla en
+nombre del señor Orsino.
+OLIVIA; Por favor no vuelvas a hablarme de él.
+VIOLA/VIOLO: La compadezco mucho.
+OLIVIA: Así también comienza el amor.
+VIOLA/VIOLO: No. No lo creo.
+OLIVIA: Cuando tu gracia y juventud hayan madurado
+cosechará tu esposa a un hombre verdadero.
+Adiós.
+VIOLA/VIOLO: Adiós.
+OLIVIA: No. Quédate. ¿Qué piensas de mí?
+VIOLA/VIOLO: Creo que no es usted lo que parece.
+OLIVIA: Opino lo mismo de ti.
+VIOLA/VIOLO: Opina muy bien, no soy lo que parezco.
+OLIVIA: Ojala fueras lo que yo quiero que parezcas que fueras.
+VIOLA/VIOLO: Soy lo que soy,
+pero no lo que parezco que soy.
+OLIVIA: (aparte) Oh, cuan hermosos aparecen en sus labios esos juegos de
+palabras repletos de ira y menosprecio. Se descubre antes el amor
+más escondido que el más infame de todos los crímenes. El amor
+también es tan oscuro como el sol. La Noche del amor es mediodía.
+(a Violo/Viola) Por la primavera y sus rosas, por el honor de la
+castidad, por lo que es cierto y verdadero…
+Te amo y no voy a esconder mi pasión ni con ingenios ni con
+razones.
+Razona más bien en cadena con la razón:
+Amor buscado es bueno, pero dado sin buscarlo es mejor.
+VIOLA/VIOLO: Sería todo entonces.
+Volveré a llorar lágrimas junto a Orsino.
+OLIVIA: Vuelve cachorro. Vuelve.
+Sólo tú puedes conmover ese corazón que ahora aborrece,
+hasta que algún día ame el corazón que ahora odia.
+20
+ESCENA II
+ANDRÉS: Que enorme pérdida de tiempo, me voy.
+Ni un segundo más por estos lares.
+TOBY: Dame una razón, por lo menos una razón.
+FABIÁN: Vaya, vaya, nos rendimos fácilmente.
+ANDRÉS: No se trata de cobardía ni de rendiciones.
+Se trata que tu sobrinita.
+Sólo tiene ojos para esa especie de eunuco que la visita.
+Yo mismo los he visto haciéndose ojitos y hablando de poetas u
+otras mariconadas.
+FABIÁN: Y ella, ¿te vio a ti?
+ANDRÉS: ¿No tienes una pregunta más interesante que hacer?
+Por supuesto que me vio.
+FABIÁN: Esa es la manera de demostrarte su amor.
+ANDRÉS: Y esa estupidez… ¿La aprendiste en el campo de batalla también?
+FABIÁN: Mujeres, querido amigo… mujeres.
+Yo conozco bien a la señora…
+Ella lo que quiere es que peleen por ella, quiere despertar la bestia
+que hay en ti.
+Ese era el momento de pegarle ahí mismo a ese ratoncito
+afeminado.
+TOBY: Ahí mismo levantarlo de una patada en el culo.
+FABIÁN: Correcto. Ella te quiere en calores. Ella te quiere guerrero.
+Ahora tienes dos opciones… o el diálogo maricueca buscando el
+odioso consenso, o la batalla directa donde gana el más mejor.
+La perra quiere sangre.
+TOBY: Lo de perra te lo guardas o la patada en el culo te la vas a comer tú.
+FABIÁN: No fue mi intención insultar a nadie.
+ANDRÉS: Sangre, Toby, sangre.
+TOBY: Este es tu momento compadre, desafía a ese cachorrito a un
+combate a cuchillo en el más puro estilo carcelario.
+Prepara un discurso violento y cruel que lo haga temblar.
+Un verdadero ¡speech!
+Te aseguro que el mejor afrodisíaco sigue siendo el macho bravío,
+animal, bruto, inconsciente y ebrio.
+FABIÁN: Sé lo que es hablar directo. Lo haré.
+Entra María.
+21
+MARÍA: Malvolio enloqueció. Se compró la carta completa. ¿Quieren
+conocer la venganza de cerca?… Por aquí, señores.
+Salen.
+ESCENA III
+En una calle de Irilia.
+SEBASTIÁN: Tu masoquismo no tiene límites Antonio.
+Al parecer te gusta sufrir, por lo que este asunto lo dejamos hasta
+aquí y no te reprendo más.
+ANTONIO: No te puedo abandonar y punto.
+Esta es una tierra extraña para ti, aquí no tienes amigos ni guías.
+Yo te sigo por amor, Sebastián.
+SEBASTIÁN: Te lo dije. Haz lo que quieras. Yo voy a recorrer esta ciudad.
+ANTONIO: Mañana Seba, ahora hay que encontrar donde alojar.
+SEBASTIÁN: Ahora Antonio y por favor no me digas Seba.
+ANTONIO: Perdóname pero el peligro estará en todas las esquinas.
+SEBASTIÁN: Yo no me puedo hacer cargo de los numeritos que te mandaste en
+esta ciudad.
+Yo no estaba contigo y a mí nadie me conoce en este lugar.
+Escóndete y cuídate.
+ANTONIO: Toma (le pasa plata). Toma toda la plata.
+Pasea por ahí y luego busca un lugar que se llama el Elefante.
+SEBASTIÁN: ¿Por qué me pasas tu plata?
+ANTONIO: Para que no mueras de inanición.
+SEBASTIÁN: Ok, yo me llevo la plata.
+Nos encontramos esta noche.
+ANTONIO: Esta noche, en el Elefante.
+SEBASTIÁN: Si toño en el elefante
+ESCENA IV
+OLIVIA: (aparte) Lo mande a llamar. ¿Y si viene?
+¿Cómo voy a celebrarlo? ¿Qué puedo ofrecerle?
+A este jovencito mejor comprarlo que rogarle.
+¡Estoy gritando!
+Sí, estoy gritando.
+(a María) ¿Dónde está Malvolio?
+Él es un empleado serio.
+22
+Él se ajusta a mi depresión.
+¿!!Dónde está Malvolio?!!
+Dios, sigo gritando.
+MARÍA: Aquí viene señora, pero algo extraño ha sucedido con él.
+Parece poseído.
+OLIVIA: ¿Qué dices María?
+¿Acaso desvaría?
+MARÍA: No… la verdad sólo sonríe.
+Yo que usted mantendría la distancia porque estoy segura que ha
+perdido la razón….
+OLIVIA: Dile que venga.
+(aparte) Más se me extravió la razón a mí que a él.
+Locura triste y feliz desvarío siguen siendo lo mismo…
+Malvolio.
+Sale María
+Entra Malvolio con una especie de bata
+que busca ocultar su provocativa ropa interior.
+MALVOLIO: Oh mi señora. ¡Oh!
+OLIVIA: ¿Sonríes? Es más bien triste la razón por la que te llamo.
+MALVOLIO: ¿Triste? Pues déjame alegrarte.
+Aunque el modelo de bañador que me acompaña me produce cierta
+obstrucción en las ingles nada importa.
+Si estos aprietes sobre mis gónadas producen la felicidad del otro,
+pasará lo que nos dice aquella acertada copla “es alegría de muchos
+aquello que a uno alegra”.
+Malvolio se abre la bata
+mostrando un increíble combinado sadomasoquista.
+OLIVIA: ¿Estimado… usted se encuentra bien?
+MALVOLIO: Tu carta llegó a buen puerto chocolatito y lo que ella ordena será
+cumplido… todo.
+OLIVIA: Malvolio, debes estar afiebrado…
+¿No será mejor que vayas a la cama?
+MALVOLIO: ¿A la cama?
+Contigo en cuatro y lo hacemos saltando a lo rana.
+MARÍA: ¡Malvolio!
+OLIVIA: ¿Pero que te ocurre Malvolio?
+MARÍA: Malvolio… ¿de casualidad nuestro querido Fabián te estuvo
+haciendo un curso intensivo de estrategia militar???
+23
+MALVOLIO: Básicamente conversamos a cerca de limpiar el cañón.
+MARÍA: ¡Insolente!
+MALVOLIO: (muy cerca de Olivia) Que no te asuste mi lenguaje de pueblo, lo
+uso justo antes de echar a remojar los porotos….
+OLIVIA: ¿Qué quiere usted decir con eso?
+MALVOLIO: Que por muy princesa que sea, igual le gusta el que se menea.
+OLIVIA: Suficiente.
+MALVOLIO: (mostrándose impúdicamente) Se que te gustan los colores fuertes.
+OLIVIA: ¿Colores fuertes?
+MALVOLIO: Se que te gusta mi risa galante.
+OLIVIA: ¿Tu risa qué?
+MALVOLIO: Venga… que venga y que te lo plante.
+OLIVIA: ¡¡Malvolio!!
+Entra María
+MARÍA: Señora… el cachorrito… llegó el cachorrito.
+OLIVIA: Corro, voy corriendo.
+María. ¿Dónde está mi tío Toby? Vaya a buscarlo.
+Malvolio, mi querido tío Toby y todas mis sirvientas quedan a su
+disposición.
+Sinceramente espero que todo lo que pudo haberle dicho Fabián
+sea pajero…. Perdón... pasajero.
+Sale.
+MALVOLIO: Por Júpiter qué delicadeza la suya…
+Todo esto calza a la perfección.
+Clarito estaba en la carta que me dejó:
+“rechaza a ese que cree que es tío mío”,
+“desprecia a los empleados de esta casa”,
+“deja que tu lengua hable de asuntos de estado
+y con los sirvientes muéstrate elegante y arrogante”.
+“Conmigo sé grosero y vulgar… eso me excita”.
+Por Júpiter sí, sí, por Júpiter…
+porque nuestros dioses quedaron cortos en este éxtasis que se me
+presenta.
+ESCENA V
+Entran Toby, Fabián y María.
+Encuentran a Malvolio desvariando,
+vestido con su combinado sadomasoquista.
+24
+TOBY: Jesús, María y José.
+FABIÁN: Guauuuu, qué estilo. Si parece chancho eléctrico.
+MALVOLIO: Atrás seres despreciables.
+MARÍA: Señor Malvolio, la patrona ha decidido que usted quede a las
+órdenes del Señor Toby.
+MALVOLIO: Aha, aha, aha… ¿eso es lo que ha ordenado?
+MARÍA: (a Toby) Recuerda que mi patrona lo quiere vivo
+y en lo posible, cuerdo…
+TOBY: ¿Qué dices pajarito? O el canario ya no quiere cantar.
+MALVOLIO: A este canario le sobra pecho señor don Toby.
+TOBY: Lo que le falta son las bolas… Quiero decir… trinos.
+Ven pajarito, ven a la jaula con el papá.
+MARÍA: (al oído de Toby) Que se ponga a rezar… que rece sus oraciones.
+MALVOLIO: ¿Mis oraciones perra pecadora?
+Lávate la boca si vas a hablar de mis oraciones.
+Ustedes son basura. Ocio sin destino alguno.
+Seres fútiles, insignificantes, baladíes, frívolos, insustanciales,
+intrascendentes, triviales, pueriles, vacuos, cortos, tardos… pobres.
+Yo no soy de los suyos.
+¡¡No tardarán en saber de mí!!
+Sale, portazo incluido. Todos ríen sin control alguno.
+TOBY: ¿Es esto posible?
+FABIÁN: Si pones esto sobre un escenario te cuelgan por sobreactuado.
+TOBY: Conseguimos correrle una teja.
+MARÍA: Síguelo que en una de esas le vuelve la cordura y nos echa todo a
+perder.
+FABIÁN: Terminará loco de verdad.
+TOBY: A este hay que amarrarlo.
+Mi sobrinita lo cree loco, ¿por qué no seguir con el juego para
+diversión nuestra y penitencia suya?
+Una vez agotada la broma podemos compadecernos y lo llevamos a
+juicio mientras la reina del catre las oficia de jueza (agarrando sin
+mesura alguna a María por el trasero).
+Entra Andrés en actitud de combate.
+ANDRÉS: Bien señores comienza la fiesta.
+TOBY: Preparaste tu speech?
+25
+FABIÁN: ¿Tú qué?
+TOBY: Olvídalo ignorante. Ok practiquemos… Fabián, tú serás el
+cachorrito maricueca.
+Se ponen en posición de enfrentamiento a cuchillos.
+TOBY: (muy ceremonioso) Bien señores, ¿algo que decir?
+FABIÁN: (saca su metralleta) Que te voy a quitar la virginidad a balazos en
+el culo.
+TOBY: Magnífico, gran estilo muy militar por lo demás… y usted señor
+Andrés de Casacuberta y Rosales.
+ANDRÉS: Mira pendejo rechucha de tu madre.
+No me conformaré con quitarte la virginidad, sino mas bien te
+rajaré el hoyo a patadas en el culo,
+haré que tus ojos miren tu cerebro por dentro, que la lengua la uses
+para limpiarte las orejas,
+secaré tu carrera de actorcito patético y sin destino
+puesto que como macho no das la talla y como hembra parecís
+maraco.
+Además, pienso aprovechar la ocasión
+para subirte los testículos a la garganta
+de modo que cada vez que se te ocurra
+cambiarle el agua a las aceitunas
+te acuerdes de mí,
+cachorro de quiltro, mocito asexuado, eunuco
+y desecho de un lupanar.
+Silencio total.
+ANDRÉS: ¿Muy fuerte?
+Parece que la cagué…
+¿Qué pasa?
+¿Hay niños cerca?....
+FABIÁN: Chuta! Chuta kai!
+TOBY: Estoy anonadado.
+Tu deberías presentarte en algún concurso cazatalentos.
+Tu gallardía no tiene límites
+y tu lenguaje está a la altura del cisne de Avon.
+FABIÁN: ¿Cuál cisne?, perdón.
+TOBY: Ya hablamos de tu ignorancia….
+Aquí vienen.
+26
+Dale tiempo de despedirse de mi sobrina y luego descargas tu furia.
+ESCENA VI
+Entran Olivia y Viola/Violo.
+OLIVIA: Bien mi violillo querido, yo ya he arriesgado mi honra y sé que fue
+un error.
+Pero este error no se deja enmendar. ¿Qué puedes pedirme tú que
+yo te niegue?
+VIOLA/VIOLO: Que ames al duque Orsino, mi señor.
+OLIVIA: ¿Cómo podría darle lo que a ti te pertenece?
+VIOLA/VIOLO: De eso yo te eximo.
+OLIVIA: ¿Volverás mañana? Adiós… dulce diablo.
+Seguirá mi alma tus pasos hasta el mismo infierno.
+Sale Olivia. Se acercan Toby y Fabián.
+TOBY: Ponte a la defensiva. Pronto.
+No sé qué fue lo que hiciste, pero tus días están contados.
+VIOLA/VIOLO: Usted se equivoca señor… no sé de dónde….
+FABIÁN: Cuídate pendejo que la bestia que te anda buscando
+tiene un prontuario que llenaría repisas completas.
+TOBY: Asesinatos, crímenes, descuartizamientos, ajustes de cuentas,
+homicidios, parricidios, fraticidios, femicidios,
+degollamientos, descueramientos… (se ahoga)…
+FABIÁN: Empotamientos… embotamientos…
+narcotráfico… halterofilia…. gimnasia rítmica.
+VIOLA/VIOLO: Pero si yo no he hecho nada.
+TOBY: Te equivocas cachorrito…. te equivocas
+y si sigues haciéndote el desentendido
+tendrás que arreglártelas conmigo (le pone el cuchillo al cuello).
+VIOLA/VIOLO: Yo no soy lo que parezco… yo no soy.
+TOBY: ¡¡¡Silencio!!!!
+Fabián, quedas a cargo voy por el ofendido.
+Sale.
+VIOLA/VIOLO: Y usted… ¿puede decirme algo…?
+FABIÁN: Muy poco,
+27
+solo que el hombre es un académico ilustrado
+que maneja el lenguaje como nadie en toda Irilia.
+Dicen que se compara a un tipo de pato europeo.
+Además, gusta de sacar las tripas de su adversario
+mientras piensa qué hacer con sus gónadas.
+VIOLA/VIOLO: ¿¿¿¿!!!!Pero qué tipo de hombre es ese????!!!!
+FABIÁN: I-ri-li-ano. De tomo y de lomo.
+¿Quieres ir a su encuentro?
+En una de esas puedo negociar una muerte rápida para ti.
+VIOLA/VIOLO: De acuerdo. En todo caso si he de morir será con mi secreto en el
+pecho.
+Salen. Entran Toby y Andrés.
+TOBY: Te aseguro que es el demonio vivo. Es un animal, una bestia,
+maneja el cuchillo como nadie.
+ANDRÉS: ¿Y si lo dejamos hasta aquí mejor?
+TOBY: El problema es que ahora es él quien no quiere apaciguarse.
+ANDRÉS: Mejor no le decimos nada, digo tal vez… no sé…
+quizás se ofenda con el speech que se me ocurrió…
+TOBY: Ya es tarde (entran Fabián y Viola/Violo)
+(a Fabián) Está a punto de caer desmayado…
+FABIÁN: (a Toby) Este otro parece alma en pena…
+A disfrutar...
+TOBY: Bien señores… sangre y arena.
+Se van a ir a los cuchillos cuando entra Antonio.
+ANTONIO: ¡¡ Abajo esas armas!!
+Si este joven y buen hombre te ha ofendido,
+me hago cargo y tomo su falta sobre mí.
+(a Viola/Violo) Más, si eres tú quien desafía déjamelo a mí.
+TOBY: ¿Y vos quien chucha sois?
+ANTONIO: (mirando a los ojos a Viola/Violo) uno que por amor es capaz de
+matar.
+TOBY: ¡¡Ah, no!! Un cola enamorado… eso es demasiado.
+Todos sacan cuchillos y comienzan la pelea que para un oficial.
+FABIÁN: (a Toby) Compadre, la policía… ¡raspa!
+28
+TOBY: (a Antonio) Estaré contigo en un momento.
+Se esconden.
+VIOLA/VIOLO: Guarda ese cuchillo, te lo ruego.
+ANDRÉS: Por supuesto… obvio… demás.
+OFICIAL: Antonio Jorge del Rayo de la Nueva Aurora Strozzi y Camasuttro.
+Queda usted arrestado por antiguas órdenes del antiguo alcalde
+Luiso Almendro Camasuttro y Severo.
+ANTONIO: (aparte) Mi tío Luiso… pensé que estaba muerto.
+Disculpe oficial, pero usted me toma por otro.
+OFICIAL: En absoluto.
+(al oído de Antonio) Podría reconocer esas piernas a kilómetros de
+distancia. Te conozco bien marinero.
+(a todos) Él sabe que lo conozco bien.
+ANTONIO: Obedeceré.
+(a Violo/Viola creyendo que es Sebastián) Y todo por seguir tus
+pasos.
+Pero, ¿qué va a ser de ti ahora que tendrás que devolverme el
+dinero que te pasé?
+OFICIAL: ¡En marcha!
+ANTONIO: Tengo que pedirte algo del dinero.
+VIOLA/VIOLO: ¿Qué dinero? Con suerte me quedan tres monedas… en fin ¡ahí te
+van dos!
+ANTONIO: ¡¡Me vas a negar ahora!!
+¡¡ Es acaso posible que todos mis desvelos no te muevan a
+compasión!!
+No te burles de mí desgracia, porque si lo haces, te juro que suelto
+la lengua y te tiro en la cara todo el amor que por ti he desplegado.
+VIOLA/VIOLO: ¿Cuál amor?
+ANTONIO: No me desafíes.
+VIOLA/VIOLO: ¿De que estás hablando? No te conozco.
+Odio, en todos los hombres, la ebriedad estúpida o cualquier otra
+seña viciosa de las que habitan en su enfermiza sangre.
+ANTONIO: ¡¡Oh my god!!
+OFICIAL: ¡Ya basta de pataleta! En marcha.
+ANTONIO: Una palabra más. A este jovencito lo rescaté
+de ser engullido por las fauces de la muerte,
+le devolví la vida y lo transformé en mi veneración.
+OFICIAL: Basta de perder el tiempo, en marcha.
+ANTONIO: No era un Dios, sino ídolo en corrupción.
+29
+Tú solo, mi querido Sebastián, has degradado tu belleza.
+Eres bello, pero eres malo.
+Quien es bello y malvado a un solo tiempo,
+es como cofre vacío con adornos del diablo.
+OFICIAL: ¡Fuera! ¡Fuera de aquí a marchar!! Has enloquecido por completo.
+A una yegua entre los carros de un faraón yo te comparo.
+ANTONIO: Me voy.
+Salen.
+VIOLA: (aparte y en éxtasis profundo)
+No puede ser… no puede ser cierto.
+Oh ilusión muestra tu verdad. ¡Muéstrate!! Oh hermano Oh mi
+Sebastián, nos han confundido… ha nombrado a Sebastián. Así es,
+es exactamente así. Es mi reflejo, yo lo imito, imito sus gestos, sus
+adornos, sus colores. Oh Dios no permitas otro espejismo. Si es
+verdad lo que presiento, buenas son las tempestades y las olas
+bravías.
+Se va.
+CUARTO ACTO
+ESCENA I
+Entra Sebastián y por detrás entran Andrés, Toby y Fabián.
+TOBY: Te dije que nos volveríamos a ver… ¡echa fuera!
+ANDRÉS: Te voy a pulverizarte, a cortarte, a maltratarte.
+SEBASTIÁN: (sorprendido) Perdón, aquí todo el mundo ha enloquecido.
+Se puede saber ¿Quiénes son ustedes?
+TOBY: ¡Ah no! Ya tengo suficiente de locura por hoy.
+Lo agarran entre los tres y lo maltratan horriblemente.
+Entra Olivia.
+OLIVIA: ¡STOOOP!! ¡Señor Tobías!! ¡¡Es una orden!!
+TOBY: Pero sobrinita, si estamos recién empezando.
+OLIVIA: ¡Fuera de mi vista!!
+(a Sebastián) Por favor, tú no te ofendas mi pequeño violillo.
+¡¡¡Fuera de aquí bestias!!!
+Mi dulce amigo, te ruego que sea la prudencia quien te guíe y no la
+ira.
+30
+Ven conmigo hasta mi casa que allí te contaré de los absurdos
+enredos urdidos por este rufián
+y te aseguro que reirás de buena gana.
+Será lo mejor. Ven, ven, te lo suplico.
+¿Te vas a negar?
+Maldita sea tu alma.
+Se va.
+ESCENA II
+Sebastián duda en soledad
+SEBASTIÁN: ¿Tiene todo esto algún sentido?
+¿Hacia dónde se dirigen las aguas?
+¿Estoy loco o acaso es un sueño?
+Que la fantasía hunda en un profundo sueño todos mis sentidos…
+y que nadie me despierte si esto es solo un sueño.
+Vuelve Olivia.
+OLIVIA: No estás en condiciones de decidir solo.
+Vamos, ven conmigo, yo seré tu guía.
+SEBASTIÁN: Iré con usted señora.
+OLIVIA: Que así sea. No te vas a arrepentir.
+Salen.
+Entra Sebastián en la más completa bipolaridad.
+SEBASTIÁN: ¿Dónde estás Antonio?
+De oro serían en este momento tus sabios consejos.
+Aquí alguien perdió la cabeza.
+Mis ojos podrían engañarme entrando en batalla con mi razón
+que solo muestra pruebas de mi locura
+o bien que la dama está completamente desquiciada.
+Antonio, ¿dónde estás?
+Oh my god please come to me in this moment and tell me qué.
+¿Que soy realmente yo….?
+¿Qué quieres corazón? ¿Cuál amor, cuál calor?
+Siento que mi alma pierde libertad,
+31
+no puedo continuar esta gran batallar.
+¿Cuál de mis amores yo tomaré en verdad?
+Todo esto es tan misterioso…
+ESCENA III
+Entra Olivia con un clérigo.
+OLIVIA: Sé que todo esto es un poco precipitado
+pero tú solo debes obedecer
+y venir conmigo junto a este santo padre
+y en un oratorio cercano jurarás la devoción que me tienes
+y así mi alma celosa e inquieta podrá por fin alcanzar la paz.
+Yo sé que todo esto es muy clandestino
+pero no será hasta que tú decidas, como hombre, de una buena vez,
+anunciar que estás perdidamente enamorado de mí
+y de ahí sin más ni más derecho a la catedral de Irilia
+donde el pueblo entero nos aclamará….
+¿Qué dices?
+SEBASTIÁN: Que el santo fraile nos conduzca.
+Te seguiré, te juraré fidelidad
+y te seré fiel hasta el fin de los tiempos. Amén.
+OLIVIA: My god, I cant believe it. Sea. Por el amor de Dios, que sea.
+Salen presurosos.
+QUINTO ACTO
+ESCENA I
+Entran guardias Antonio, Orsino, Viola/Violo.
+OFICIAL: ¡¡¡Aquí está el hombre señor!!!
+ORSINO: Antonio, Antonio.
+Antonio Jorge del Rayo de la Nueva Aurora Strozzi y Camasuttro.
+Pensé que jamás te volvería a ver.
+Pensé que tendrías la vergüenza suficiente
+como para no aparecerte nunca más por nuestra Irilia
+a quien estuviste a centímetros de convertir en un burdel.
+ANTONIO: Mi muy noble señor.
+Permítame que rechace todos sus insultos
+pues nunca fue Antonio ni ladrón, ni cabrón.
+32
+Tampoco cafiche y menos puto.
+Estoy aquí porque fui hechizado.
+Este jovencito que ve aquí yo mismo lo rescaté de las olas
+espumeantes del mar embravecido
+cuando se hundía sin remedio alguno aferrado a un tronco
+descomunal.
+Yo le di la vida, y con ella… mi amor… sin límites… sin
+condiciones.
+¡Por él arriesgué todo!
+Por él estuve a punto de ir a cuchilla limpia contra unos verdaderos
+monstruos que pretendían atacarlo.
+Fui reconocido y detenido por Climaterio…
+ORSINO: ¿Climaterio? ¿Quién es Climaterio?
+OFICIAL: Era mi nombre artístico señor,
+antes de entrar a su guardia personal fui bailarín y bueno…
+ORSINO: Suficiente… continúa.
+ANTONIO: Pues bien, este jovencito que ve usted aquí me negó…
+me negó como Pedro para evitar unirse a mi destino.
+Negó cualquier relación conmigo
+como si lo nuestro hubiese sido un amor de verano.
+¡Todo en un abrir y cerrar de ojos!!
+ORSINO: Llévenselo, fuera de aquí… todo esto ya es mucho.
+ANTONIO: (mientras se lo llevan atrás)
+Una sola pestañeada y me habís negado.
+Te pasaste Seba… no tenís perdón de Dios… te pasaste.
+ESCENA II
+Entran Olivia y séquito.
+OLIVIA: ¿Realmente existe algo que yo no pueda darte? Estás faltando a tu
+palabra.
+VIOLA: Señora…
+ORSINO: Gentil señora.
+VIOLA: Señora… el duque quiere hablar y yo he de callar.
+OLIVIA: Si de nuevo se trata del viejo estribillo;
+el asunto ya suena desafinado
+y se acrecienta el floreciente desprecio que tengo por tus melodías.
+ORSINO: ¿Todavía tan cruel?
+OLIVIA: Todavía tan perseverante señor.
+33
+ORSINO: Hasta la perversión si es necesario.
+Oh mujer implacable ante tu alma he desplegado las ofrendas más
+fieles.
+¿Qué más puedo hacer?
+OLIVIA: Lo que le plazca.
+Exactamente lo que le convenga.
+ORSINO: Si no me faltara el coraje podría matar lo que más amo.
+A veces los celos más salvajes no están exentos de nobleza.
+Pero escucha con atención y trata de comprender.
+Yo sé quién es el objeto de tus deseos.
+Pero este cachorro a quien sé que amas
+y a quien yo, lo juro por la bandera de Irilia,
+también llevo en mi corazón.
+Este jovencito será apartado de tus crueles ojos
+desde donde se robó el trono de su patrón.
+Tú vienes conmigo querido Violo,
+mientras mi pensamiento madura crueles planes
+para hacer parir el corazón de la dama.
+VIOLA/VIOLO: Y yo deseo, feliz y dispuesto morir, una y mil veces,
+por darte la paz.
+OLIVIA: ¿Con quién te vas Violo?
+VIOLA/VIOLO: Con el que amo más que a mis ojos, más que a mi propia vida.
+Y si miento que me castiguen todos los dioses con la muerte
+por ultraje y robo de amor.
+OLIVIA: Me siento despreciada.
+¡Pendejo traidor!
+VIOLA/VIOLO: ¿Cuál desprecio, cuál traición?
+OLIVIA: ¡Que comparezca el santo fraile!!
+Violo, pero si tú eres mi esposo.
+ORSINO: ¿Esposo?
+CLÉRIGO: Se han casado.
+Lo confirmó la unión de sus manos
+y la unión de sus labios en un hermoso beso de amor.
+Luego se intercambiaron anillos
+y juraron frente al pabellón de Irilia
+amor eterno.
+ORSINO: ¡¡¡Frente a la colorada!!!
+¡No lo puedo creer!!
+CLÉRIGO: ¡Es!
+34
+ORSINO: Tú, ¡maldición de maricueca en disfraz!!
+¿Has pensado lo que serás cuando se te vengan los años?
+La astucia que utilizaste para arrebatarme mi dama
+podría convertirse en la trampa que te liquide en tu camino.
+Adiós.
+Es toda tuya.
+¡Dirige, sin embargo tus pasos hacia donde nunca nos
+encontremos!
+ESCENA III
+Entran Andrés, Toby y Fabián heridos y huyendo.
+ANDRÉS: ¡Socorro, ayuda, por el amor de Dios!!
+TOBY: ¡¡Un médico, un médico!!
+OLIVIA: ¿Podemos saber quién es el responsable de esta carnicería?
+SEBASTIÁN: ¡Yo!
+Y realmente lamento en el alma haber herido a su pariente señora
+mía…
+me miras de forma extraña…
+debo pensar que te has ofendido.
+No por favor, no lo pienses
+y si lo has pensado te suplico me perdones.
+Juntos realizamos un juramento de amor
+y es por ese juramento que hoy de rodillas inclinado sobre tus pies
+ruego lágrimas para obtener tu perdón.
+ORSINO: Oh my god.
+ANTONIO: ¿Sebi? ¿Eres tú, Sebastián?
+SEBASTIÁN: Antonio, Toño, Toño. Toño, mi dulce amigo,
+no te imaginas que largas las horas de dolor y sufrimiento
+desde nuestra separación.
+ANTONIO: Sebastián Eduardo de Elisa y Aragón, ¿eres tú?
+VIOLA/VIOLO: ¿De Elisa y de Aragón? (lo ve).
+OLIVIA: My really God.
+SEBASTIÁN: (enfrentado a Viola/Violo) ¿Qué es esto?
+¿Qué delito he cometido que mi castigo es siquiera suponer que mi
+hermana está viva?
+Yo nunca tuve un hermano.
+Tuve una hermana devorada por las olas del mar.
+Antes de perder el juicio por completo, por favor dime tu nombre,
+tu país y al menos cuatro de tus apellidos.
+35
+VIOLA: Soy hija de Sebastián y hermana de un hermoso joven del mismo
+nombre.
+Ese joven vestido como tú encontró en el mar su tumba, y si los
+espíritus viven tú eres su máxima expresión.
+SEBASTIÁN: Soy, en verdad un espíritu. Sin embargo mi madre me entregó estas
+carnes para vivir esta vida.
+Si tú fueras mujer, y todo parece indicarlo, bañaría tu rostro con
+mis lágrimas…
+VIOLA: El papá tenía una marca en la ingle.
+SEBASTIÁN: Yo tengo la misma.
+VIOLA: La mamá tenía una marca en sus omoplatos.
+SEBASTIÁN: Y tú tienes la misma.
+VIOLA: (a todos) Mi nombre es Viola Gertrudis Almendra de Elisa y
+Aragón.
+Un capitán me salvó de las aguas y guarda mis trajes de doncella.
+Una vez a salvo, mi vida ha transcurrido entre este gentilhombre y
+esta gentildama.
+SEBASTIÁN: (a Olivia) Así las cosas, has vivido un engaño.
+Estuviste muy cerca de prometerte a una virgen
+y por mi vida que no te equivocaste,
+porque virgen es el hombre que ahora tomas.
+ORSINO: A ver, a ver cachorrito,
+me repetiste muchas veces que nunca amarías a una mujer tanto
+como a mí.
+VIOLA: Así es…
+Entra Malvolio un tanto desencajado y con María.
+MALVOLIO: En el nombre de Dios, señora mía,
+usted me ha humillado y el mundo debe saberlo.
+Aunque me mandaste a la oscuridad y me pusiste por guardia a
+vuestro patético pariente alcohólico,
+además de intentar engañarme con el payaso de vuestra corte,
+hoy devenido en triste drogadicto,
+aquí tengo la carta en que usted con su puño y letra
+se compromete conmigo.
+OLIVIA: No te comprendo Malvolio.
+MALVOLIO: Repase su propia carta... Señorita.
+¿No querías que me pusiera grosero y te tratara de perrita caliente?
+¡¿No querías que te enseñara el beto, beto, la dieta de la lagartija y
+entender el famoso Talagante?!
+¿No me querías en trajes sadomasoquistas?
+36
+¿No querías compartir los silicios conmigo, la fusta conmigo, las
+bolitas conmigo…?
+Yo me rebajé, dejé mis trajes austeros, dejé mi vocabulario discreto
+sereno y bello… todo por una traición.
+¿Por qué fuiste tan cruel?
+OLIVIA: Ay Malvolio esta carta no la escribí yo.
+Esta es letra de María, no caben dudas.
+María te escuchamos.
+MARÍA: Señora yo…
+FABIÁN: Señora confesaré ahora mismo que fui yo y el señor Toby
+quienes maquinamos esta broma macabra contra el señor Malvolio
+que ya iba siendo hora que pagara todos sus insultos, descortesías y
+ninguneos,
+amén de haberse comido a mi esposa.
+ANDRÉS: Suficiente.
+No es ese el asunto, el asunto es que la pobre María escribió la
+carta porque Toby por pago se la sirvió…
+o sea no, lo que quiero decir es que la tomó por esposa…
+MARÍA: Señora, eso no es tan así,
+yo no me he casado con nadie,
+menos con este alcohólico lascivo
+a quien con su medicina le alcanza para calentar la tetera
+pero no para tomársela.
+TOBY: Gracias María, continúo.
+Estimados no ha habido maldad alguna en esta simple broma
+que más invita a la risa que a la venganza.
+Si medimos las ofensas de todos los lados
+se verá que están de lo más equilibradas.
+OLIVIA: Ay querido Malvolio como se han reído de ti.
+MALVOLIO: Me vengaré de todos los confabulados. TODOS.
+Mi venganza será completa…
+Venga (se va).
+ORSINO: (a Viola) Bien cachorrit…
+tu patrón se despide y en pago a tus servicios,
+tan lejanos a tu sexo, género y delicada condición virginal,
+además por haberme llamado señor por tanto tiempo
+es que ahora te doy mi mano,
+para que seas, desde hoy,
+dueña y señora del que fue tu dueño.
+OLIVIA: Y hermana mía.
+37
+ORSINO: Ve tras Malvolio e ínstenlo a hacer las paces.
+(Irrumpe la canción “I like to be in América” de West Side Story)
+Por el momento nadie se mueve de aquí
+y tú, cachorro, porque así te llamo mientras seas un varoncito,
+cambiarás tu nombre en el preciso momento en que pases a ser la
+amada de Orsino.
+Reina de su corazón y de las costas de Irilia.
+Cantan
+ORSINO: Rompen las olas las rocas
+Rompe el amor en tu boca
+TODOS: Quiero vivir en Irilia
+Quiero morir en Irilia
+ELLAS: Quiero parir en Irilia.
+ELLOS: Quiero engendrar en Irilia.
+ELLAS: Lavo mi piel en tus mares.
+ELLOS: Lavo en tu arena mis males.
+ELLAS: Tus playas me llenan de embrujos.
+ELLOS: Sobre tus playas te estrujo.
+TODOS: Quiero vivir en Irilia
+Quiero morir en Irilia
+Quiero besarte en Irilia
+MARÍA: Yo voy a darte en Irilia.
+SEBASTIÁN: Quiero vivir en tus mares
+Quiero soñar tus raudales
+Quiero sentir tus amores
+ANTONIO: Cuídate entonces
+de los temblores.
+TODOS: Quiero vivir en Irilia
+Quiero morir en Irilia
+Quiero abrazarte mi Irilia
+Agradecerte mi Irilia
+Lo que quiero ya!
+Lo que siento ya!
+Es el mundo para amar
+Tener por fin
+Libertad.
+38
+Fin
+
+THE END
+`).then(e => console.log(`Código finalizado, ${e} mensagens
+enviadas`)).catch(console.error)
