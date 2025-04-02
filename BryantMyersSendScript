@@ -1,0 +1,1005 @@
+async function enviarScript(scriptText){
+const lines = scriptText.split(/[\n\t]+/).map(line =>
+line.trim()).filter(line => line);
+main = document.querySelector("#main"),
+textarea = main.querySelector(div[contenteditable="true"])
+if(!textarea) throw new Error("Não há uma conversa aberta")
+for(const line of lines){
+console.log(line)
+textarea.focus();
+document.execCommand('insertText', false, line);
+textarea.dispatchEvent(new Event('change', {bubbles: true}));
+setTimeout(() => {
+(main.querySelector([data-testid="send"]) ||
+main.querySelector([data-icon="send"])).click();
+}, 100);
+if(lines.indexOf(line) !== lines.length - 1) await new
+Promise(resolve => setTimeout(resolve, 250));
+}
+return lines.length;
+}
+enviarScript(`
+
+
+
+Eh, yeh
+Depílate y úntate el splash de chocolate
+Entra al yate y relájate, y desnúdate
+Ese totito a ti te late, y ese culote (y ese culote)
+A ti te gusta chingar conmigo, na má' desde que te derroté, mai
+Aféitate la tota, porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quieres ir por el mar en el yate
+O nos vamos volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Unos pantis Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet? (good morning)
+Hoy despertamo' fumando en Californi
+Bebé, ¿qué tú quieres beber?
+Yo bebo champán, yo no bebo McCormick
+Yo sé que a ti te gusta forni
+Cuando tú te sienta' horny
+Toa' mi' prendas son de oro, yo no uso zirconi
+Hoy te lo voy a meter
+En el yate o en el jet
+En la mansión o en el chalet
+Ten el pelo y la' uña' set
+Aféitate la piel
+De ti tengo sed
+Hoy va a llover
+Y hoy yo te quiero ver
+Y quiero prender
+Que te vo'a recoger en la Range Rover
+Mami, tu cuerpo es un Premio Nobel
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué país tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Te llevo pa la Gucci
+Te pongo a correr Banshee y Scramble
+Hoy te vo'a lamber
+Baby, tú ere' mi Amber y yo tu Wiz Khali
+Tú quiere' operarte en Cali
+Cinco, doce; no me gustan la' pali'
+Tengo toa' la' Jordan como Spike Lee
+Tú y yo combinamo' bien cabrón
+Como Tiger, como Kylie
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tres
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Alex Killer Music
+Kronix Magical
+Equalizer
+Yo siempre ando buscando el libro, Moro
+O con Cotto, o con Franco
+Mr. Myers coming Soon
+Bryant Myers
+Mera, baby
+La Oscuridad
+Eh, yeh
+Depílate y úntate el splash de chocolate
+Entra al yate y relájate, y desnúdate
+Ese totito a ti te late, y ese culote (y ese culote)
+A ti te gusta chingar conmigo, na má' desde que te derroté, mai
+Aféitate la tota, porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quieres ir por el mar en el yate
+O nos vamos volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Unos pantis Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet? (good morning)
+Hoy despertamo' fumando en Californi
+Bebé, ¿qué tú quieres beber?
+Yo bebo champán, yo no bebo McCormick
+Yo sé que a ti te gusta forni
+Cuando tú te sienta' horny
+Toa' mi' prendas son de oro, yo no uso zirconi
+Hoy te lo voy a meter
+En el yate o en el jet
+En la mansión o en el chalet
+Ten el pelo y la' uña' set
+Aféitate la piel
+De ti tengo sed
+Hoy va a llover
+Y hoy yo te quiero ver
+Y quiero prender
+Que te vo'a recoger en la Range Rover
+Mami, tu cuerpo es un Premio Nobel
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué país tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Te llevo pa la Gucci
+Te pongo a correr Banshee y Scramble
+Hoy te vo'a lamber
+Baby, tú ere' mi Amber y yo tu Wiz Khali
+Tú quiere' operarte en Cali
+Cinco, doce; no me gustan la' pali'
+Tengo toa' la' Jordan como Spike Lee
+Tú y yo combinamo' bien cabrón
+Como Tiger, como Kylie
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tres
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Alex Killer Music
+Kronix Magical
+Equalizer
+Yo siempre ando buscando el libro, Moro
+O con Cotto, o con Franco
+Mr. Myers coming Soon
+Bryant Myers
+Mera, baby
+La Oscuridad
+Eh, yeh
+Depílate y úntate el splash de chocolate
+Entra al yate y relájate, y desnúdate
+Ese totito a ti te late, y ese culote (y ese culote)
+A ti te gusta chingar conmigo, na má' desde que te derroté, mai
+Aféitate la tota, porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quieres ir por el mar en el yate
+O nos vamos volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Unos pantis Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet? (good morning)
+Hoy despertamo' fumando en Californi
+Bebé, ¿qué tú quieres beber?
+Yo bebo champán, yo no bebo McCormick
+Yo sé que a ti te gusta forni
+Cuando tú te sienta' horny
+Toa' mi' prendas son de oro, yo no uso zirconi
+Hoy te lo voy a meter
+En el yate o en el jet
+En la mansión o en el chalet
+Ten el pelo y la' uña' set
+Aféitate la piel
+De ti tengo sed
+Hoy va a llover
+Y hoy yo te quiero ver
+Y quiero prender
+Que te vo'a recoger en la Range Rover
+Mami, tu cuerpo es un Premio Nobel
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué país tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Te llevo pa la Gucci
+Te pongo a correr Banshee y Scramble
+Hoy te vo'a lamber
+Baby, tú ere' mi Amber y yo tu Wiz Khali
+Tú quiere' operarte en Cali
+Cinco, doce; no me gustan la' pali'
+Tengo toa' la' Jordan como Spike Lee
+Tú y yo combinamo' bien cabrón
+Como Tiger, como Kylie
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tres
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Alex Killer Music
+Kronix Magical
+Equalizer
+Yo siempre ando buscando el libro, Moro
+O con Cotto, o con Franco
+Mr. Myers coming Soon
+Bryant Myers
+Mera, baby
+La Oscuridad
+Eh, yeh
+Depílate y úntate el splash de chocolate
+Entra al yate y relájate, y desnúdate
+Ese totito a ti te late, y ese culote (y ese culote)
+A ti te gusta chingar conmigo, na má' desde que te derroté, mai
+Aféitate la tota, porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quieres ir por el mar en el yate
+O nos vamos volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Unos pantis Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet? (good morning)
+Hoy despertamo' fumando en Californi
+Bebé, ¿qué tú quieres beber?
+Yo bebo champán, yo no bebo McCormick
+Yo sé que a ti te gusta forni
+Cuando tú te sienta' horny
+Toa' mi' prendas son de oro, yo no uso zirconi
+Hoy te lo voy a meter
+En el yate o en el jet
+En la mansión o en el chalet
+Ten el pelo y la' uña' set
+Aféitate la piel
+De ti tengo sed
+Hoy va a llover
+Y hoy yo te quiero ver
+Y quiero prender
+Que te vo'a recoger en la Range Rover
+Mami, tu cuerpo es un Premio Nobel
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué país tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Te llevo pa la Gucci
+Te pongo a correr Banshee y Scramble
+Hoy te vo'a lamber
+Baby, tú ere' mi Amber y yo tu Wiz Khali
+Tú quiere' operarte en Cali
+Cinco, doce; no me gustan la' pali'
+Tengo toa' la' Jordan como Spike Lee
+Tú y yo combinamo' bien cabrón
+Como Tiger, como Kylie
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tres
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Alex Killer Music
+Kronix Magical
+Equalizer
+Yo siempre ando buscando el libro, Moro
+O con Cotto, o con Franco
+Mr. Myers coming Soon
+Bryant Myers
+Mera, baby
+La Oscuridad
+Eh, yeh
+Depílate y úntate el splash de chocolate
+Entra al yate y relájate, y desnúdate
+Ese totito a ti te late, y ese culote (y ese culote)
+A ti te gusta chingar conmigo, na má' desde que te derroté, mai
+Aféitate la tota, porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quieres ir por el mar en el yate
+O nos vamos volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Unos pantis Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet? (good morning)
+Hoy despertamo' fumando en Californi
+Bebé, ¿qué tú quieres beber?
+Yo bebo champán, yo no bebo McCormick
+Yo sé que a ti te gusta forni
+Cuando tú te sienta' horny
+Toa' mi' prendas son de oro, yo no uso zirconi
+Hoy te lo voy a meter
+En el yate o en el jet
+En la mansión o en el chalet
+Ten el pelo y la' uña' set
+Aféitate la piel
+De ti tengo sed
+Hoy va a llover
+Y hoy yo te quiero ver
+Y quiero prender
+Que te vo'a recoger en la Range Rover
+Mami, tu cuerpo es un Premio Nobel
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué país tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Te llevo pa la Gucci
+Te pongo a correr Banshee y Scramble
+Hoy te vo'a lamber
+Baby, tú ere' mi Amber y yo tu Wiz Khali
+Tú quiere' operarte en Cali
+Cinco, doce; no me gustan la' pali'
+Tengo toa' la' Jordan como Spike Lee
+Tú y yo combinamo' bien cabrón
+Como Tiger, como Kylie
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tres
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Alex Killer Music
+Kronix Magical
+Equalizer
+Yo siempre ando buscando el libro, Moro
+O con Cotto, o con Franco
+Mr. Myers coming Soon
+Bryant Myers
+Mera, baby
+La Oscuridad
+Eh, yeh
+Depílate y úntate el splash de chocolate
+Entra al yate y relájate, y desnúdate
+Ese totito a ti te late, y ese culote (y ese culote)
+A ti te gusta chingar conmigo, na má' desde que te derroté, mai
+Aféitate la tota, porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quieres ir por el mar en el yate
+O nos vamos volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Unos pantis Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet? (good morning)
+Hoy despertamo' fumando en Californi
+Bebé, ¿qué tú quieres beber?
+Yo bebo champán, yo no bebo McCormick
+Yo sé que a ti te gusta forni
+Cuando tú te sienta' horny
+Toa' mi' prendas son de oro, yo no uso zirconi
+Hoy te lo voy a meter
+En el yate o en el jet
+En la mansión o en el chalet
+Ten el pelo y la' uña' set
+Aféitate la piel
+De ti tengo sed
+Hoy va a llover
+Y hoy yo te quiero ver
+Y quiero prender
+Que te vo'a recoger en la Range Rover
+Mami, tu cuerpo es un Premio Nobel
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué país tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Te llevo pa la Gucci
+Te pongo a correr Banshee y Scramble
+Hoy te vo'a lamber
+Baby, tú ere' mi Amber y yo tu Wiz Khali
+Tú quiere' operarte en Cali
+Cinco, doce; no me gustan la' pali'
+Tengo toa' la' Jordan como Spike Lee
+Tú y yo combinamo' bien cabrón
+Como Tiger, como Kylie
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tres
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Alex Killer Music
+Kronix Magical
+Equalizer
+Yo siempre ando buscando el libro, Moro
+O con Cotto, o con Franco
+Mr. Myers coming Soon
+Bryant Myers
+Mera, baby
+La Oscuridad
+Eh, yeh
+Depílate y úntate el splash de chocolate
+Entra al yate y relájate, y desnúdate
+Ese totito a ti te late, y ese culote (y ese culote)
+A ti te gusta chingar conmigo, na má' desde que te derroté, mai
+Aféitate la tota, porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quieres ir por el mar en el yate
+O nos vamos volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Unos pantis Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet? (good morning)
+Hoy despertamo' fumando en Californi
+Bebé, ¿qué tú quieres beber?
+Yo bebo champán, yo no bebo McCormick
+Yo sé que a ti te gusta forni
+Cuando tú te sienta' horny
+Toa' mi' prendas son de oro, yo no uso zirconi
+Hoy te lo voy a meter
+En el yate o en el jet
+En la mansión o en el chalet
+Ten el pelo y la' uña' set
+Aféitate la piel
+De ti tengo sed
+Hoy va a llover
+Y hoy yo te quiero ver
+Y quiero prender
+Que te vo'a recoger en la Range Rover
+Mami, tu cuerpo es un Premio Nobel
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué país tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Te llevo pa la Gucci
+Te pongo a correr Banshee y Scramble
+Hoy te vo'a lamber
+Baby, tú ere' mi Amber y yo tu Wiz Khali
+Tú quiere' operarte en Cali
+Cinco, doce; no me gustan la' pali'
+Tengo toa' la' Jordan como Spike Lee
+Tú y yo combinamo' bien cabrón
+Como Tiger, como Kylie
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tres
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Alex Killer Music
+Kronix Magical
+Equalizer
+Yo siempre ando buscando el libro, Moro
+O con Cotto, o con Franco
+Mr. Myers coming Soon
+Bryant Myers
+Mera, baby
+La Oscuridad
+Eh, yeh
+Depílate y úntate el splash de chocolate
+Entra al yate y relájate, y desnúdate
+Ese totito a ti te late, y ese culote (y ese culote)
+A ti te gusta chingar conmigo, na má' desde que te derroté, mai
+Aféitate la tota, porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quieres ir por el mar en el yate
+O nos vamos volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Unos pantis Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet? (good morning)
+Hoy despertamo' fumando en Californi
+Bebé, ¿qué tú quieres beber?
+Yo bebo champán, yo no bebo McCormick
+Yo sé que a ti te gusta forni
+Cuando tú te sienta' horny
+Toa' mi' prendas son de oro, yo no uso zirconi
+Hoy te lo voy a meter
+En el yate o en el jet
+En la mansión o en el chalet
+Ten el pelo y la' uña' set
+Aféitate la piel
+De ti tengo sed
+Hoy va a llover
+Y hoy yo te quiero ver
+Y quiero prender
+Que te vo'a recoger en la Range Rover
+Mami, tu cuerpo es un Premio Nobel
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué país tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Te llevo pa la Gucci
+Te pongo a correr Banshee y Scramble
+Hoy te vo'a lamber
+Baby, tú ere' mi Amber y yo tu Wiz Khali
+Tú quiere' operarte en Cali
+Cinco, doce; no me gustan la' pali'
+Tengo toa' la' Jordan como Spike Lee
+Tú y yo combinamo' bien cabrón
+Como Tiger, como Kylie
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tres
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Alex Killer Music
+Kronix Magical
+Equalizer
+Yo siempre ando buscando el libro, Moro
+O con Cotto, o con Franco
+Mr. Myers coming Soon
+Bryant Myers
+Mera, baby
+La Oscuridad
+v
+Eh, yeh
+Depílate y úntate el splash de chocolate
+Entra al yate y relájate, y desnúdate
+Ese totito a ti te late, y ese culote (y ese culote)
+A ti te gusta chingar conmigo, na má' desde que te derroté, mai
+Aféitate la tota, porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quieres ir por el mar en el yate
+O nos vamos volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Unos pantis Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet? (good morning)
+Hoy despertamo' fumando en Californi
+Bebé, ¿qué tú quieres beber?
+Yo bebo champán, yo no bebo McCormick
+Yo sé que a ti te gusta forni
+Cuando tú te sienta' horny
+Toa' mi' prendas son de oro, yo no uso zirconi
+Hoy te lo voy a meter
+En el yate o en el jet
+En la mansión o en el chalet
+Ten el pelo y la' uña' set
+Aféitate la piel
+De ti tengo sed
+Hoy va a llover
+Y hoy yo te quiero ver
+Y quiero prender
+Que te vo'a recoger en la Range Rover
+Mami, tu cuerpo es un Premio Nobel
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué país tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Te llevo pa la Gucci
+Te pongo a correr Banshee y Scramble
+Hoy te vo'a lamber
+Baby, tú ere' mi Amber y yo tu Wiz Khali
+Tú quiere' operarte en Cali
+Cinco, doce; no me gustan la' pali'
+Tengo toa' la' Jordan como Spike Lee
+Tú y yo combinamo' bien cabrón
+Como Tiger, como Kylie
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tres
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Alex Killer Music
+Kronix Magical
+Equalizer
+Yo siempre ando buscando el libro, Moro
+O con Cotto, o con Franco
+Mr. Myers coming Soon
+Bryant Myers
+Mera, baby
+La Oscuridad
+Eh, yeh
+Depílate y úntate el splash de chocolate
+Entra al yate y relájate, y desnúdate
+Ese totito a ti te late, y ese culote (y ese culote)
+A ti te gusta chingar conmigo, na má' desde que te derroté, mai
+Aféitate la tota, porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quieres ir por el mar en el yate
+O nos vamos volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Unos pantis Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet? (good morning)
+Hoy despertamo' fumando en Californi
+Bebé, ¿qué tú quieres beber?
+Yo bebo champán, yo no bebo McCormick
+Yo sé que a ti te gusta forni
+Cuando tú te sienta' horny
+Toa' mi' prendas son de oro, yo no uso zirconi
+Hoy te lo voy a meter
+En el yate o en el jet
+En la mansión o en el chalet
+Ten el pelo y la' uña' set
+Aféitate la piel
+De ti tengo sed
+Hoy va a llover
+Y hoy yo te quiero ver
+Y quiero prender
+Que te vo'a recoger en la Range Rover
+Mami, tu cuerpo es un Premio Nobel
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué país tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Te llevo pa la Gucci
+Te pongo a correr Banshee y Scramble
+Hoy te vo'a lamber
+Baby, tú ere' mi Amber y yo tu Wiz Khali
+Tú quiere' operarte en Cali
+Cinco, doce; no me gustan la' pali'
+Tengo toa' la' Jordan como Spike Lee
+Tú y yo combinamo' bien cabrón
+Como Tiger, como Kylie
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tres
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Alex Killer Music
+Kronix Magical
+Equalizer
+Yo siempre ando buscando el libro, Moro
+O con Cotto, o con Franco
+Mr. Myers coming Soon
+Bryant Myers
+Mera, baby
+La Oscuridad
+Eh, yeh
+Depílate y úntate el splash de chocolate
+Entra al yate y relájate, y desnúdate
+Ese totito a ti te late, y ese culote (y ese culote)
+A ti te gusta chingar conmigo, na má' desde que te derroté, mai
+Aféitate la tota, porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quieres ir por el mar en el yate
+O nos vamos volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Unos pantis Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet? (good morning)
+Hoy despertamo' fumando en Californi
+Bebé, ¿qué tú quieres beber?
+Yo bebo champán, yo no bebo McCormick
+Yo sé que a ti te gusta forni
+Cuando tú te sienta' horny
+Toa' mi' prendas son de oro, yo no uso zirconi
+Hoy te lo voy a meter
+En el yate o en el jet
+En la mansión o en el chalet
+Ten el pelo y la' uña' set
+Aféitate la piel
+De ti tengo sed
+Hoy va a llover
+Y hoy yo te quiero ver
+Y quiero prender
+Que te vo'a recoger en la Range Rover
+Mami, tu cuerpo es un Premio Nobel
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué país tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Te llevo pa la Gucci
+Te pongo a correr Banshee y Scramble
+Hoy te vo'a lamber
+Baby, tú ere' mi Amber y yo tu Wiz Khali
+Tú quiere' operarte en Cali
+Cinco, doce; no me gustan la' pali'
+Tengo toa' la' Jordan como Spike Lee
+Tú y yo combinamo' bien cabrón
+Como Tiger, como Kylie
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tres
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Alex Killer Music
+Kronix Magical
+Equalizer
+Yo siempre ando buscando el libro, Moro
+O con Cotto, o con Franco
+Mr. Myers coming Soon
+Bryant Myers
+Mera, baby
+La Oscuridad
+Eh, yeh
+Depílate y úntate el splash de chocolate
+Entra al yate y relájate, y desnúdate
+Ese totito a ti te late, y ese culote (y ese culote)
+A ti te gusta chingar conmigo, na má' desde que te derroté, mai
+Aféitate la tota, porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quieres ir por el mar en el yate
+O nos vamos volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Unos pantis Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet? (good morning)
+Hoy despertamo' fumando en Californi
+Bebé, ¿qué tú quieres beber?
+Yo bebo champán, yo no bebo McCormick
+Yo sé que a ti te gusta forni
+Cuando tú te sienta' horny
+Toa' mi' prendas son de oro, yo no uso zirconi
+Hoy te lo voy a meter
+En el yate o en el jet
+En la mansión o en el chalet
+Ten el pelo y la' uña' set
+Aféitate la piel
+De ti tengo sed
+Hoy va a llover
+Y hoy yo te quiero ver
+Y quiero prender
+Que te vo'a recoger en la Range Rover
+Mami, tu cuerpo es un Premio Nobel
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué país tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Te llevo pa la Gucci
+Te pongo a correr Banshee y Scramble
+Hoy te vo'a lamber
+Baby, tú ere' mi Amber y yo tu Wiz Khali
+Tú quiere' operarte en Cali
+Cinco, doce; no me gustan la' pali'
+Tengo toa' la' Jordan como Spike Lee
+Tú y yo combinamo' bien cabrón
+Como Tiger, como Kylie
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tres
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Alex Killer Music
+Kronix Magical
+Equalizer
+Yo siempre ando buscando el libro, Moro
+O con Cotto, o con Franco
+Mr. Myers coming Soon
+Bryant Myers
+Mera, baby
+La Oscuridad
+Eh, yeh
+Depílate y úntate el splash de chocolate
+Entra al yate y relájate, y desnúdate
+Ese totito a ti te late, y ese culote (y ese culote)
+A ti te gusta chingar conmigo, na má' desde que te derroté, mai
+Aféitate la tota, porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quieres ir por el mar en el yate
+O nos vamos volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Unos pantis Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet? (good morning)
+Hoy despertamo' fumando en Californi
+Bebé, ¿qué tú quieres beber?
+Yo bebo champán, yo no bebo McCormick
+Yo sé que a ti te gusta forni
+Cuando tú te sienta' horny
+Toa' mi' prendas son de oro, yo no uso zirconi
+Hoy te lo voy a meter
+En el yate o en el jet
+En la mansión o en el chalet
+Ten el pelo y la' uña' set
+Aféitate la piel
+De ti tengo sed
+Hoy va a llover
+Y hoy yo te quiero ver
+Y quiero prender
+Que te vo'a recoger en la Range Rover
+Mami, tu cuerpo es un Premio Nobel
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué país tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Te llevo pa la Gucci
+Te pongo a correr Banshee y Scramble
+Hoy te vo'a lamber
+Baby, tú ere' mi Amber y yo tu Wiz Khali
+Tú quiere' operarte en Cali
+Cinco, doce; no me gustan la' pali'
+Tengo toa' la' Jordan como Spike Lee
+Tú y yo combinamo' bien cabrón
+Como Tiger, como Kylie
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tres
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Alex Killer Music
+Kronix Magical
+Equalizer
+Yo siempre ando buscando el libro, Moro
+O con Cotto, o con Franco
+Mr. Myers coming Soon
+Bryant Myers
+Mera, baby
+La Oscuridad
+Eh, yeh
+Depílate y úntate el splash de chocolate
+Entra al yate y relájate, y desnúdate
+Ese totito a ti te late, y ese culote (y ese culote)
+A ti te gusta chingar conmigo, na má' desde que te derroté, mai
+Aféitate la tota, porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quieres ir por el mar en el yate
+O nos vamos volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Unos pantis Victoria's Secret, bebé
+¿En qué paí' tú quieres amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet? (good morning)
+Hoy despertamo' fumando en Californi
+Bebé, ¿qué tú quieres beber?
+Yo bebo champán, yo no bebo McCormick
+Yo sé que a ti te gusta forni
+Cuando tú te sienta' horny
+Toa' mi' prendas son de oro, yo no uso zirconi
+Hoy te lo voy a meter
+En el yate o en el jet
+En la mansión o en el chalet
+Ten el pelo y la' uña' set
+Aféitate la piel
+De ti tengo sed
+Hoy va a llover
+Y hoy yo te quiero ver
+Y quiero prender
+Que te vo'a recoger en la Range Rover
+Mami, tu cuerpo es un Premio Nobel
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué país tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Te llevo pa la Gucci
+Te pongo a correr Banshee y Scramble
+Hoy te vo'a lamber
+Baby, tú ere' mi Amber y yo tu Wiz Khali
+Tú quiere' operarte en Cali
+Cinco, doce; no me gustan la' pali'
+Tengo toa' la' Jordan como Spike Lee
+Tú y yo combinamo' bien cabrón
+Como Tiger, como Kylie
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tres
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Aféitate la tota porque hoy te lo vo'a meter
+Te compré el traje Versace que valía mil tre'
+Uno' panti' Victoria's Secret, bebé
+¿En qué paí' tú quiere' amanecer?
+¿Te quiere' ir por el mar en el yate
+O no' vamo' volando en el jet?
+Alex Killer Music
+Kronix Magical
+Equalizer
+Yo siempre ando buscando el libro, Moro
+O con Cotto, o con Franco
+Mr. Myers coming Soon
+Bryant Myers
+Mera, baby
+La Oscuridad
